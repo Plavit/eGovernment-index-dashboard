@@ -1,0 +1,956 @@
+﻿Czech name,Code,eGov index,Year,EU28
+Dánsko,DNK,0.915,2018,1
+Austrálie,AUS,0.9053,2018,0
+Jižní Korea,KOR,0.901,2018,0
+Spojené království,GBR,0.8999,2018,1
+Švédsko,SWE,0.8882,2018,1
+Finsko,FIN,0.8815,2018,1
+Singapur,SGP,0.8812,2018,0
+Nový Zéland,NZL,0.8806,2018,0
+Francie,FRA,0.879,2018,1
+Japonsko,JPN,0.8783,2018,0
+Spojené státy americké,USA,0.8769,2018,0
+Německo,DEU,0.8765,2018,1
+Holandsko,NLD,0.8757,2018,1
+Norsko,NOR,0.8557,2018,0
+Švýcarsko,CHE,0.852,2018,0
+Estonsko,EST,0.8486,2018,1
+Španělsko,ESP,0.8415,2018,1
+Lucembursko,LUX,0.8334,2018,1
+Island,ISL,0.8316,2018,0
+Rakousko,AUT,0.8301,2018,1
+Spojené arabské emiráty,ARE,0.8295,2018,0
+Irsko,IRL,0.8287,2018,1
+Kanada,CAN,0.8258,2018,0
+Itálie,ITA,0.8209,2018,1
+Lichtenštejnsko,LIE,0.8204,2018,0
+Bahrain,BHR,0.8116,2018,0
+Belgie,BEL,0.808,2018,1
+Monaco,MCO,0.805,2018,0
+Portugalsko,PRT,0.8031,2018,1
+Malta,MLT,0.8011,2018,1
+Izrael,ISR,0.7998,2018,0
+Rusko,RUS,0.7969,2018,0
+Polsko,POL,0.7926,2018,1
+Uruguay,URY,0.7858,2018,0
+Řecko,GRC,0.7833,2018,1
+Kypr,CYP,0.7736,2018,1
+Slovinsko,SVN,0.7714,2018,1
+Bělorusko,BLR,0.7641,2018,0
+Kazachstán,KAZ,0.7597,2018,0
+Litva,LTU,0.7534,2018,1
+Kuvajt,KWT,0.7388,2018,0
+Chile,CHL,0.735,2018,0
+Argentina,ARG,0.7335,2018,0
+Brazílie,BRA,0.7327,2018,0
+Maďarsko,HUN,0.7265,2018,1
+Barbados,BRB,0.7229,2018,0
+Bulharsko,BGR,0.7177,2018,1
+Malajsie,MYS,0.7174,2018,0
+Srbsko,SRB,0.7155,2018,0
+Slovensko,SVK,0.7155,2018,1
+Katar,QAT,0.7132,2018,0
+Saudská arábie,SAU,0.7119,2018,0
+Turecko,TUR,0.7112,2018,0
+Česká republika,CZE,0.7084,2018,1
+Chorvatsko,HRV,0.7018,2018,1
+Kostarika,CRI,0.7004,2018,0
+Lotyšsko,LVA,0.6996,2018,1
+Černá Hora,MNE,0.6966,2018,0
+Brunej,BRN,0.6923,2018,0
+Gruzie,GEO,0.6893,2018,0
+Kolumbie,COL,0.6871,2018,0
+Andorra,AND,0.6857,2018,0
+Omán,OMN,0.6846,2018,0
+Mexiko,MEX,0.6818,2018,0
+Čína,CHN,0.6811,2018,0
+Mauricius,MUS,0.6678,2018,0
+Rumunsko,ROU,0.6671,2018,1
+Jihoafrická republika,ZAF,0.6618,2018,0
+Moldavsko,MDA,0.659,2018,0
+Ázerbajdžán,AZE,0.6574,2018,0
+Svatý Kryštof a Nevis,,0.6554,2018,0
+Bahamské ostrovy,BHS,0.6552,2018,0
+Thajsko,THA,0.6543,2018,0
+Albánie,ALB,0.6519,2018,0
+Filipíny,PHL,0.6512,2018,0
+San Marino,SMR,0.6471,2018,0
+Peru,PER,0.6461,2018,0
+Trinidad a Tobago,TTO,0.644,2018,0
+Makedonie,MKD,0.6312,2018,0
+Tunisko,TUN,0.6254,2018,0
+Uzbekistán,UZB,0.6207,2018,0
+Ukrajina,UKR,0.6165,2018,0
+Seychely,SYC,0.6163,2018,0
+Ekvádor,ECU,0.6129,2018,0
+Panama,PAN,0.6092,2018,0
+Írán,IRN,0.6083,2018,0
+Arménie,ARM,0.5944,2018,0
+Vietnam,VNM,0.5931,2018,0
+Grenada,GRD,0.593,2018,0
+Antigua a Barbuda,,0.5906,2018,0
+Kyrgyzstán,KGZ,0.5835,2018,0
+Mongolsko,MNG,0.5824,2018,0
+Dominika,DMA,0.5794,2018,0
+Srí Lanka,LKA,0.5751,2018,0
+Dominikánská republika,,0.5726,2018,0
+Indie,IND,0.5669,2018,0
+Maledivy,MDV,0.5615,2018,0
+Jordán,JOR,0.5575,2018,0
+Libanon,LBN,0.553,2018,0
+El Salvador,,0.5469,2018,0
+Ghana,GHA,0.539,2018,0
+Fiji,FJI,0.5348,2018,0
+Bolívie,BOL,0.5307,2018,0
+Svatý Vincenc a Grenadiny,,0.5306,2018,0
+Bosna a Hercegovina,BIH,0.5303,2018,0
+Venezuela,VEN,0.5287,2018,0
+Indonésie,IDN,0.5258,2018,0
+Paraguay,PRY,0.5255,2018,0
+Tonga,TON,0.5237,2018,0
+Maroko,MAR,0.5214,2018,0
+Palau,PLW,0.5024,2018,0
+Cabo Verde,,0.498,2018,0
+Guatemala,GTM,0.4974,2018,0
+Egypt,EGY,0.488,2018,0
+Bangladéš,BGD,0.4862,2018,0
+Surinam,SUR,0.4773,2018,0
+Nepál,NPL,0.4748,2018,0
+Jamaica,JAM,0.4697,2018,0
+Svatý,,0.466,2018,0
+Rwanda,RWA,0.459,2018,0
+Namibie,NAM,0.4554,2018,0
+Keňa,KEN,0.4541,2018,0
+Honduras,HND,0.4474,2018,0
+Guyana,GUY,0.4316,2018,0
+Gabon,GAB,0.4313,2018,0
+Bhútán,BTN,0.4274,2018,0
+Botswana,BWA,0.4253,2018,0
+Samoa,WSM,0.4236,2018,0
+Nikaragua,NIC,0.4233,2018,0
+Alžírsko,DZA,0.4227,2018,0
+Tádžikistán,TJK,0.422,2018,0
+Belize,BLZ,0.4115,2018,0
+Zambie,ZMB,0.4111,2018,0
+Kuba,CUB,0.4101,2018,0
+Uganda,UGA,0.4055,2018,0
+Kamerun,CMR,0.3997,2018,0
+Vanuatu,VUT,0.399,2018,0
+Togo,TGO,0.3989,2018,0
+Tanzanie,TZA,0.3929,2018,0
+Libye,LBY,0.3833,2018,0
+Eswatini,SWZ,0.382,2018,0
+Timor-Leste,TLS,0.3816,2018,0
+Nigérie,NGA,0.3807,2018,0
+Tuvalu,TUV,0.3779,2018,0
+Kambodža,KHM,0.3753,2018,0
+Zimbabwe,ZWE,0.3692,2018,0
+Turkmenistán,TKM,0.3652,2018,0
+Pákistán,PAK,0.3566,2018,0
+Marshall,,0.3543,2018,0
+Senegal,SEN,0.3486,2018,0
+Etiopie,ETH,0.3463,2018,0
+Sýrie,SYR,0.3459,2018,0
+Kiribati,KIR,0.345,2018,0
+Svatý Tomáš a Princův ostrov,,0.3424,2018,0
+Angola,AGO,0.3376,2018,0
+Irák,IRQ,0.3376,2018,0
+Myanmar,MMR,0.3328,2018,0
+Nauru,NRU,0.3324,2018,0
+Benin,BEN,0.3264,2018,0
+Mosambik,MOZ,0.3195,2018,0
+Mikronésie,,0.3155,2018,0
+Laos,LAO,0.3056,2018,0
+Haiti,HTI,0.3047,2018,0
+Kongo,COG,0.3024,2018,0
+Burkina,BFA,0.3016,2018,0
+Burundi,BDI,0.2985,2018,0
+Lesotho,LSO,0.2968,2018,0
+Gambie,GMB,0.2958,2018,0
+Solomonovy ostrovy,,0.2816,2018,0
+Madagaskar,MDG,0.2792,2018,0
+Papua-Nová Guinea,PNG,0.2787,2018,0
+Pobřeží slonoviny,CIV,0.2776,2018,0
+Libérie,LBR,0.2737,2018,0
+Sierra Leone,SLE,0.2717,2018,0
+Malawi,MWI,0.2708,2018,0
+Demokratická republika Kongo,COD,0.2612,2018,0
+Afghánistán,AFG,0.2585,2018,0
+Mali,MLI,0.2424,2018,0
+Džibutsko,DJI,0.2401,2018,0
+Sudan,SDN,0.2394,2018,0
+Guinea,GIN,0.2348,2018,0
+Komory,COM,0.2336,2018,0
+Mauritánie,MRT,0.2314,2018,0
+Rovníková Guinea,,0.2298,2018,0
+KLDR,PRK,0.2159,2018,0
+Jemen,YEM,0.2154,2018,0
+Guinea-Bissau,GNB,0.1887,2018,0
+Středoafrická republika,CAF,0.1584,2018,0
+Eritrea,ERI,0.1337,2018,0
+Čad,TCD,0.1257,2018,0
+Jižní Súdán,SSD,0.1214,2018,0
+Niger,NER,0.1095,2018,0
+Somálsko,SOM,0.0566,2018,0
+Spojené království,GBR,0.9193,2016,
+Austrálie,AUS,0.9143,2016,
+Jižní Korea,KOR,0.8915,2016,
+Singapur,SGP,0.8828,2016,
+Finsko,FIN,0.8817,2016,
+Švédsko,SWE,0.8704,2016,
+Holandsko,NLD,0.8659,2016,
+Nový Zéland,NZL,0.8653,2016,
+Dánsko,DNK,0.851,2016,
+Francie,FRA,0.8456,2016,
+Japonsko,JPN,0.844,2016,
+Spojené státy americké,USA,0.842,2016,
+Estonsko,EST,0.8334,2016,
+Kanada,CAN,0.8285,2016,
+Německo,DEU,0.821,2016,
+Rakousko,AUT,0.8208,2016,
+Španělsko,ESP,0.8135,2016,
+Norsko,NOR,0.8117,2016,
+Belgie,BEL,0.7874,2016,
+Izrael,ISR,0.7806,2016,
+Slovinsko,SVN,0.7769,2016,
+Itálie,ITA,0.7764,2016,
+Litva,LTU,0.7747,2016,
+Bahrain,BHR,0.7734,2016,
+Lucembursko,LUX,0.7705,2016,
+Irsko,IRL,0.7689,2016,
+Island,ISL,0.7662,2016,
+Švýcarsko,CHE,0.7525,2016,
+Spojené arabské emiráty,ARE,0.7515,2016,
+Malta,MLT,0.7424,2016,
+Monaco,MCO,0.7315,2016,
+Lichtenštejnsko,LIE,0.7313,2016,
+Kazachstán,KAZ,0.725,2016,
+Uruguay,URY,0.7237,2016,
+Rusko,RUS,0.7215,2016,
+Polsko,POL,0.7211,2016,
+Chorvatsko,HRV,0.7162,2016,
+Portugalsko,PRT,0.7144,2016,
+Srbsko,SRB,0.7131,2016,
+Kuvajt,KWT,0.708,2016,
+Argentina,ARG,0.6978,2016,
+Chile,CHL,0.6949,2016,
+Řecko,GRC,0.691,2016,
+Saudská arábie,SAU,0.6822,2016,
+Lotyšsko,LVA,0.681,2016,
+Maďarsko,HUN,0.6745,2016,
+Černá Hora,MNE,0.6733,2016,
+Katar,QAT,0.6699,2016,
+Bělorusko,BLR,0.6625,2016,
+Česká republika,CZE,0.6454,2016,
+Brazílie,BRA,0.6377,2016,
+Bulharsko,BGR,0.6376,2016,
+Kostarika,CRI,0.6314,2016,
+Barbados,BRB,0.631,2016,
+Andorra,AND,0.6302,2016,
+Ázerbajdžán,AZE,0.6274,2016,
+Kolumbie,COL,0.6237,2016,
+Mauricius,MUS,0.6231,2016,
+Mexiko,MEX,0.6195,2016,
+Malajsie,MYS,0.6175,2016,
+Gruzie,GEO,0.6108,2016,
+Ukrajina,UKR,0.6076,2016,
+Čína,CHN,0.6071,2016,
+Kypr,CYP,0.6023,2016,
+Moldavsko,MDA,0.5994,2016,
+Omán,OMN,0.5962,2016,
+Slovensko,SVK,0.5915,2016,
+Turecko,TUR,0.59,2016,
+Makedonie,MKD,0.5885,2016,
+Trinidad a Tobago,TTO,0.578,2016,
+Filipíny,PHL,0.5765,2016,
+Tunisko,TUN,0.5682,2016,
+Libanon,LBN,0.5646,2016,
+Ekvádor,ECU,0.5625,2016,
+Rumunsko,ROU,0.5611,2016,
+Jihoafrická republika,ZAF,0.5546,2016,
+Thajsko,THA,0.5522,2016,
+San Marino,SMR,0.5506,2016,
+Srí Lanka,LKA,0.5445,2016,
+Uzbekistán,UZB,0.5434,2016,
+Peru,PER,0.5381,2016,
+Albánie,ALB,0.5331,2016,
+Brunej,BRN,0.5298,2016,
+Mongolsko,MNG,0.5194,2016,
+Maroko,MAR,0.5186,2016,
+Seychely,SYC,0.5181,2016,
+Arménie,ARM,0.5179,2016,
+Grenada,GRD,0.5168,2016,
+Vietnam,VNM,0.5143,2016,
+Venezuela,VEN,0.5128,2016,
+Jordán,JOR,0.5123,2016,
+Bosna a Hercegovina,BIH,0.5118,2016,
+Bahamské ostrovy,BHS,0.5108,2016,
+Svatý Kryštof a Nevis,0,0.5034,2016,
+Fidži,,0.4989,2016,
+Paraguay,PRY,0.4989,2016,
+Kyrgyzstán,KGZ,0.4969,2016,
+Dominikánská republika,0,0.4914,2016,
+Panama,PAN,0.4903,2016,
+Antigua a Barbuda,0,0.4892,2016,
+Bolívie,BOL,0.4821,2016,
+Guatemala,GTM,0.479,2016,
+Kapverdy,,0.4742,2016,
+El Salvador,0,0.4718,2016,
+Tonga,TON,0.47,2016,
+Írán,IRN,0.4649,2016,
+Indie,IND,0.4637,2016,
+Egypt,EGY,0.4594,2016,
+Dominika,DMA,0.4577,2016,
+Palau,PLW,0.4546,2016,
+Surinam,SUR,0.4546,2016,
+Jamaica,JAM,0.4534,2016,
+Botswana,BWA,0.4531,2016,
+Svatá Lucie,,0.4531,2016,
+Svatý Vincenc a Grenadiny,0,0.4494,2016,
+Indonésie,IDN,0.4478,2016,
+Maledivy,MDV,0.433,2016,
+Libye,LBY,0.4322,2016,
+Keňa,KEN,0.4186,2016,
+Ghana,GHA,0.4181,2016,
+Samoa,WSM,0.4019,2016,
+Belize,BLZ,0.3825,2016,
+Nikaragua,NIC,0.3801,2016,
+Bangladéš,BGD,0.3799,2016,
+Namibie,NAM,0.3682,2016,
+Guyana,GUY,0.3651,2016,
+Honduras,HND,0.3611,2016,
+Uganda,UGA,0.3599,2016,
+Gabon,GAB,0.3584,2016,
+Tanzánie,,0.3533,2016,
+Kuba,CUB,0.3522,2016,
+Zambie,ZMB,0.3507,2016,
+Bhútán,BTN,0.3506,2016,
+Zimbabwe,ZWE,0.3472,2016,
+Nepál,NPL,0.3458,2016,
+Svazijsko,,0.3412,2016,
+Sýrie,SYR,0.3404,2016,
+Rwanda,RWA,0.339,2016,
+Tádžikistán,TJK,0.3366,2016,
+Turkmenistán,TKM,0.3337,2016,
+Irák,IRQ,0.3334,2016,
+Angola,AGO,0.3311,2016,
+Nigérie,NGA,0.3291,2016,
+Senegal,SEN,0.325,2016,
+Kiribati,KIR,0.3122,2016,
+Mikronésie,0,0.3103,2016,
+Togo,TGO,0.3096,2016,
+Laos,LAO,0.309,2016,
+Vanuatu,VUT,0.3078,2016,
+Alžírsko,DZA,0.2999,2016,
+Tuvalu,TUV,0.295,2016,
+Nauru,NRU,0.2868,2016,
+KLDR,PRK,0.2801,2016,
+Lesotho,LSO,0.277,2016,
+Kamerun,CMR,0.2759,2016,
+Marshallovy ostrovy,,0.2695,2016,
+Etiopie,ETH,0.2666,2016,
+Kambodža,KHM,0.2593,2016,
+Pákistán,PAK,0.2583,2016,
+Timor-Leste,TLS,0.2582,2016,
+Sudan,SDN,0.2539,2016,
+Kongo,COG,0.2497,2016,
+Madagaskar,MDG,0.2416,2016,
+Šalamounovy ostrovy,,0.2406,2016,
+Rovníková Guinea,0,0.2403,2016,
+Malawi,MWI,0.2398,2016,
+Gambie,GMB,0.2396,2016,
+Svatý Tomáš a Princův ostrov,0,0.239,2016,
+Myanmar,MMR,0.2362,2016,
+Libérie,LBR,0.2338,2016,
+Afghánistán,AFG,0.2313,2016,
+Mosambik,MOZ,0.2305,2016,
+Burundi,BDI,0.2277,2016,
+Jemen,YEM,0.2248,2016,
+Pobřeží slonoviny,CIV,0.2185,2016,
+Komory,COM,0.2155,2016,
+Benin,BEN,0.2039,2016,
+Haiti,HTI,0.1931,2016,
+Papua-Nová Guinea,PNG,0.1882,2016,
+Demokratická republika Kongo,COD,0.1876,2016,
+Guinea-Bissau,GNB,0.1818,2016,
+Mali,MLI,0.1817,2016,
+Jižní Súdán,SSD,0.1791,2016,
+Mauritánie,MRT,0.1734,2016,
+Burkina Faso,,0.1598,2016,
+Sierra Leone,SLE,0.1594,2016,
+Džibutsko,DJI,0.1337,2016,
+Čad,TCD,0.1256,2016,
+Guinea,GIN,0.1226,2016,
+Eritrea,ERI,0.0902,2016,
+Středoafrická republika,CAF,0.0789,2016,
+Niger,NER,0.0593,2016,
+Somálsko,SOM,0.027,2016,
+Jižní Korea,KOR,0.9462,2014,
+Austrálie,AUS,0.9103,2014,
+Singapur,SGP,0.9076,2014,
+Francie,FRA,0.8938,2014,
+Holandsko,NLD,0.8897,2014,
+Japonsko,JPN,0.8874,2014,
+Spojené státy americké,USA,0.8748,2014,
+Spojené království,GBR,0.8695,2014,
+Nový Zéland,NZL,0.8644,2014,
+Finsko,FIN,0.8449,2014,
+Kanada,CAN,0.8418,2014,
+Španělsko,ESP,0.841,2014,
+Norsko,NOR,0.8357,2014,
+Švédsko,SWE,0.8225,2014,
+Estonsko,EST,0.818,2014,
+Dánsko,DNK,0.8162,2014,
+Izrael,ISR,0.8162,2014,
+Bahrain,BHR,0.8089,2014,
+Island,ISL,0.797,2014,
+Rakousko,AUT,0.7912,2014,
+Německo,DEU,0.7864,2014,
+Irsko,IRL,0.781,2014,
+Itálie,ITA,0.7593,2014,
+Lucembursko,LUX,0.7591,2014,
+Belgie,BEL,0.7564,2014,
+Uruguay,URY,0.742,2014,
+Rusko,RUS,0.7296,2014,
+Kazachstán,KAZ,0.7283,2014,
+Litva,LTU,0.7271,2014,
+Švýcarsko,CHE,0.7267,2014,
+Lotyšsko,LVA,0.7178,2014,
+Spojené arabské emiráty,ARE,0.7136,2014,
+Chile,CHL,0.7122,2014,
+Řecko,GRC,0.7118,2014,
+Lichtenštejnsko,LIE,0.6982,2014,
+Saudská arábie,SAU,0.69,2014,
+Portugalsko,PRT,0.69,2014,
+Monaco,MCO,0.6715,2014,
+Maďarsko,HUN,0.6637,2014,
+Malta,MLT,0.6518,2014,
+Slovinsko,SVN,0.6505,2014,
+Polsko,POL,0.6482,2014,
+Andorra,AND,0.6426,2014,
+Katar,QAT,0.6362,2014,
+Černá Hora,MNE,0.6346,2014,
+Argentina,ARG,0.6306,2014,
+Chorvatsko,HRV,0.6282,2014,
+Omán,OMN,0.6273,2014,
+Kuvajt,KWT,0.6268,2014,
+Kolumbie,COL,0.6173,2014,
+Slovensko,SVK,0.6148,2014,
+Malajsie,MYS,0.6115,2014,
+Česká republika,CZE,0.607,2014,
+Kostarika,CRI,0.6061,2014,
+Bělorusko,BLR,0.6053,2014,
+Gruzie,GEO,0.6047,2014,
+Brazílie,BRA,0.6008,2014,
+Kypr,CYP,0.5958,2014,
+Barbados,BRB,0.5933,2014,
+Antigua a Barbuda,0,0.5927,2014,
+Arménie,ARM,0.5897,2014,
+San Marino,SMR,0.5823,2014,
+Mexiko,MEX,0.5733,2014,
+Rumunsko,ROU,0.5632,2014,
+Mongolsko,MNG,0.5581,2014,
+Moldavsko,MDA,0.5571,2014,
+Venezuela,VEN,0.5564,2014,
+Ázerbajdžán,AZE,0.5472,2014,
+Srbsko,SRB,0.5472,2014,
+Čína,CHN,0.545,2014,
+Turecko,TUR,0.5443,2014,
+Peru,PER,0.5435,2014,
+Bulharsko,BGR,0.5421,2014,
+Srí Lanka,LKA,0.5418,2014,
+Tunisko,TUN,0.539,2014,
+Mauricius,MUS,0.5338,2014,
+Panama,PAN,0.5242,2014,
+Grenada,GRD,0.522,2014,
+Jordán,JOR,0.5167,2014,
+Egypt,EGY,0.5129,2014,
+Seychely,SYC,0.5113,2014,
+Maroko,MAR,0.506,2014,
+Ekvádor,ECU,0.5053,2014,
+Albánie,ALB,0.5046,2014,
+Fiji,FJI,0.5044,2014,
+Brunej,BRN,0.5042,2014,
+Ukrajina,UKR,0.5032,2014,
+El Salvador,0,0.4989,2014,
+Libanon,LBN,0.4982,2014,
+Svatý Kryštof a Nevis,0,0.498,2014,
+Trinidad a Tobago,TTO,0.4932,2014,
+Bahamské ostrovy,BHS,0.49,2014,
+Jihoafrická republika,ZAF,0.4869,2014,
+Maledivy,MDV,0.4813,2014,
+Filipíny,PHL,0.4768,2014,
+Makedonie,MKD,0.472,2014,
+Bosna a Hercegovina,BIH,0.4707,2014,
+Tonga,TON,0.4706,2014,
+Vietnam,VNM,0.4705,2014,
+Uzbekistán,UZB,0.4695,2014,
+Kyrgyzstán,KGZ,0.4657,2014,
+Thajsko,THA,0.4631,2014,
+Bolívie,BOL,0.4562,2014,
+Svatá Lucie,,0.4525,2014,
+Írán,IRN,0.4508,2014,
+Indonésie,IDN,0.4487,2014,
+Dominikánská republika,0,0.4481,2014,
+Palau,PLW,0.4415,2014,
+Jamaica,JAM,0.4388,2014,
+Dominika,DMA,0.4338,2014,
+Samoa,WSM,0.4204,2014,
+Botswana,BWA,0.4198,2014,
+Svatý Vincenc a Grenadiny,0,0.4158,2014,
+Honduras,HND,0.4083,2014,
+Surinam,SUR,0.4045,2014,
+Kuba,CUB,0.3917,2014,
+Namibie,NAM,0.388,2014,
+Indie,IND,0.3834,2014,
+Keňa,KEN,0.3805,2014,
+Belize,BLZ,0.3774,2014,
+Libye,LBY,0.3753,2014,
+Paraguay,PRY,0.374,2014,
+Ghana,GHA,0.3735,2014,
+Guyana,GUY,0.3695,2014,
+Rwanda,RWA,0.3589,2014,
+Zimbabwe,ZWE,0.3585,2014,
+Kapverdy,,0.3551,2014,
+Turkmenistán,TKM,0.3511,2014,
+Tádžikistán,TJK,0.3395,2014,
+Mikronésie,0,0.3337,2014,
+Gabon,GAB,0.3294,2014,
+Kiribati,KIR,0.3201,2014,
+Guatemala,GTM,0.316,2014,
+Irák,IRQ,0.3141,2014,
+Sýrie,SYR,0.3134,2014,
+Alžírsko,DZA,0.3106,2014,
+Tuvalu,TUV,0.3059,2014,
+Svazijsko,,0.3056,2014,
+Kambodža,KHM,0.2999,2014,
+Angola,AGO,0.297,2014,
+Nigérie,NGA,0.2929,2014,
+Marshallovy ostrovy,,0.2851,2014,
+Bhútán,BTN,0.2829,2014,
+Kamerun,CMR,0.2782,2014,
+Nauru,NRU,0.2776,2014,
+Tanzánie,,0.2764,2014,
+Nikaragua,NIC,0.2759,2014,
+Bangladéš,BGD,0.2757,2014,
+KLDR,PRK,0.2753,2014,
+Jemen,YEM,0.272,2014,
+Senegal,SEN,0.2666,2014,
+Laos,LAO,0.2659,2014,
+Lesotho,LSO,0.2629,2014,
+Sudan,SDN,0.2606,2014,
+Madagaskar,MDG,0.2606,2014,
+Uganda,UGA,0.2593,2014,
+Etiopie,ETH,0.2589,2014,
+Pákistán,PAK,0.258,2014,
+Vanuatu,VUT,0.2571,2014,
+Kongo,COG,0.257,2014,
+Timor-Leste,TLS,0.2528,2014,
+Togo,TGO,0.2446,2014,
+Zambie,ZMB,0.2389,2014,
+Mosambik,MOZ,0.2384,2014,
+Nepál,NPL,0.2344,2014,
+Malawi,MWI,0.2321,2014,
+Gambie,GMB,0.2285,2014,
+Rovníková Guinea,0,0.2268,2014,
+Svatý Tomáš a Princův ostrov,0,0.2218,2014,
+Šalamounovy ostrovy,,0.2087,2014,
+Pobřeží slonoviny,CIV,0.2039,2014,
+Burundi,BDI,0.1928,2014,
+Afghánistán,AFG,0.19,2014,
+Mauritánie,MRT,0.1893,2014,
+Myanmar,MMR,0.1869,2014,
+Haiti,HTI,0.1809,2014,
+Komory,COM,0.1808,2014,
+Burkina Faso,,0.1804,2014,
+Libérie,LBR,0.1768,2014,
+Benin,BEN,0.1685,2014,
+Mali,MLI,0.1634,2014,
+Guinea-Bissau,GNB,0.1609,2014,
+Demokratická republika Kongo,COD,0.1551,2014,
+Džibutsko,DJI,0.1456,2014,
+Jižní Súdán,SSD,0.1418,2014,
+Sierra Leone,SLE,0.1329,2014,
+Středoafrická republika,CAF,0.1257,2014,
+Papua-Nová Guinea,PNG,0.1203,2014,
+Čad,TCD,0.1076,2014,
+Guinea,GIN,0.0954,2014,
+Niger,NER,0.0946,2014,
+Eritrea,ERI,0.0908,2014,
+Somálsko,SOM,0.0139,2014,
+Jižní Korea,KOR,0.9283,2012,
+Holandsko,NLD,0.9125,2012,
+Spojené království,GBR,0.896,2012,
+Dánsko,DNK,0.8889,2012,
+Spojené státy americké,USA,0.8687,2012,
+Francie,FRA,0.8635,2012,
+Švédsko,SWE,0.8599,2012,
+Norsko,NOR,0.8593,2012,
+Finsko,FIN,0.8505,2012,
+Singapur,SGP,0.8474,2012,
+Kanada,CAN,0.843,2012,
+Austrálie,AUS,0.839,2012,
+Nový Zéland,NZL,0.8381,2012,
+Lichtenštejnsko,LIE,0.8264,2012,
+Švýcarsko,CHE,0.8134,2012,
+Izrael,ISR,0.81,2012,
+Německo,DEU,0.8079,2012,
+Japonsko,JPN,0.8019,2012,
+Lucembursko,LUX,0.8014,2012,
+Estonsko,EST,0.7987,2012,
+Rakousko,AUT,0.784,2012,
+Island,ISL,0.7835,2012,
+Španělsko,ESP,0.777,2012,
+Belgie,BEL,0.7718,2012,
+Slovinsko,SVN,0.7492,2012,
+Monaco,MCO,0.7468,2012,
+Rusko,RUS,0.7345,2012,
+Spojené arabské emiráty,ARE,0.7344,2012,
+Litva,LTU,0.7333,2012,
+Chorvatsko,HRV,0.7328,2012,
+Maďarsko,HUN,0.7201,2012,
+Itálie,ITA,0.719,2012,
+Portugalsko,PRT,0.7165,2012,
+Irsko,IRL,0.7149,2012,
+Malta,MLT,0.7131,2012,
+Bahrain,BHR,0.6946,2012,
+Řecko,GRC,0.6872,2012,
+Kazachstán,KAZ,0.6844,2012,
+Chile,CHL,0.6769,2012,
+Malajsie,MYS,0.6703,2012,
+Saudská arábie,SAU,0.6658,2012,
+Lotyšsko,LVA,0.6604,2012,
+Kolumbie,COL,0.6572,2012,
+Barbados,BRB,0.6566,2012,
+Kypr,CYP,0.6508,2012,
+Česká republika,CZE,0.6491,2012,
+Polsko,POL,0.6441,2012,
+Katar,QAT,0.6405,2012,
+Antigua a Barbuda,0,0.6345,2012,
+Uruguay,URY,0.6315,2012,
+Srbsko,SRB,0.6312,2012,
+San Marino,SMR,0.6305,2012,
+Slovensko,SVK,0.6292,2012,
+Brunej,BRN,0.625,2012,
+Mexiko,MEX,0.624,2012,
+Argentina,ARG,0.6228,2012,
+Černá Hora,MNE,0.6218,2012,
+Andorra,AND,0.6172,2012,
+Brazílie,BRA,0.6167,2012,
+Bulharsko,BGR,0.6132,2012,
+Bělorusko,BLR,0.609,2012,
+Rumunsko,ROU,0.606,2012,
+Kuvajt,KWT,0.596,2012,
+Omán,OMN,0.5944,2012,
+Bahamské ostrovy,BHS,0.5793,2012,
+Panama,PAN,0.5733,2012,
+Trinidad a Tobago,TTO,0.5731,2012,
+Ukrajina,UKR,0.5653,2012,
+Moldavsko,MDA,0.5626,2012,
+Makedonie,MKD,0.5587,2012,
+Venezuela,VEN,0.5585,2012,
+Gruzie,GEO,0.5563,2012,
+Dominika,DMA,0.5561,2012,
+El Salvador,0,0.5513,2012,
+Grenada,GRD,0.5479,2012,
+Mongolsko,MNG,0.5443,2012,
+Kostarika,CRI,0.5397,2012,
+Čína,CHN,0.5359,2012,
+Bosna a Hercegovina,BIH,0.5328,2012,
+Turecko,TUR,0.5281,2012,
+Svatý Kryštof a Nevis,0,0.5272,2012,
+Peru,PER,0.523,2012,
+Vietnam,VNM,0.5217,2012,
+Seychely,SYC,0.5192,2012,
+Svatý Vincenc a Grenadiny,0,0.5177,2012,
+Albánie,ALB,0.5161,2012,
+Libanon,LBN,0.5139,2012,
+Filipíny,PHL,0.513,2012,
+Dominikánská republika,0,0.513,2012,
+Svatá Lucie,,0.5122,2012,
+Uzbekistán,UZB,0.5099,2012,
+Thajsko,THA,0.5093,2012,
+Mauricius,MUS,0.5066,2012,
+Arménie,ARM,0.4997,2012,
+Maledivy,MDV,0.4994,2012,
+Ázerbajdžán,AZE,0.4984,2012,
+Indonésie,IDN,0.4949,2012,
+Jordán,JOR,0.4884,2012,
+Kyrgyzstán,KGZ,0.4879,2012,
+Írán,IRN,0.4876,2012,
+Jihoafrická republika,ZAF,0.4869,2012,
+Ekvádor,ECU,0.4869,2012,
+Tunisko,TUN,0.4833,2012,
+Paraguay,PRY,0.4802,2012,
+Fiji,FJI,0.4672,2012,
+Bolívie,BOL,0.4658,2012,
+Egypt,EGY,0.4611,2012,
+Jamaica,JAM,0.4552,2012,
+Guyana,GUY,0.4549,2012,
+Kuba,CUB,0.4488,2012,
+Tonga,TON,0.4405,2012,
+Guatemala,GTM,0.439,2012,
+Palau,PLW,0.4359,2012,
+Samoa,WSM,0.4358,2012,
+Srí Lanka,LKA,0.4357,2012,
+Surinam,SUR,0.4344,2012,
+Honduras,HND,0.4341,2012,
+Kapverdy,,0.4297,2012,
+Keňa,KEN,0.4212,2012,
+Maroko,MAR,0.4209,2012,
+Botswana,BWA,0.4186,2012,
+Tádžikistán,TJK,0.4069,2012,
+Namibie,NAM,0.3937,2012,
+Belize,BLZ,0.3923,2012,
+Indie,IND,0.3829,2012,
+Turkmenistán,TKM,0.3813,2012,
+Mikronésie,0,0.3812,2012,
+Sýrie,SYR,0.3705,2012,
+Gabon,GAB,0.3687,2012,
+Nikaragua,NIC,0.3621,2012,
+KLDR,PRK,0.3616,2012,
+Alžírsko,DZA,0.3608,2012,
+Zimbabwe,ZWE,0.3583,2012,
+Tuvalu,TUV,0.3539,2012,
+Vanuatu,VUT,0.3512,2012,
+Lesotho,LSO,0.3501,2012,
+Irák,IRQ,0.3409,2012,
+Svatý Tomáš a Princův ostrov,0,0.3327,2012,
+Tanzánie,,0.3311,2012,
+Rwanda,RWA,0.3291,2012,
+Nauru,NRU,0.3242,2012,
+Angola,AGO,0.3203,2012,
+Uganda,UGA,0.3185,2012,
+Svazijsko,,0.3179,2012,
+Ghana,GHA,0.3159,2012,
+Marshallovy ostrovy,,0.3129,2012,
+Kamerun,CMR,0.307,2012,
+Madagaskar,MDG,0.3054,2012,
+Kiribati,KIR,0.2998,2012,
+Bangladéš,BGD,0.2991,2012,
+Rovníková Guinea,0,0.2955,2012,
+Bhútán,BTN,0.2942,2012,
+Laos,LAO,0.2935,2012,
+Zambie,ZMB,0.291,2012,
+Kambodža,KHM,0.2902,2012,
+Pákistán,PAK,0.2823,2012,
+Kongo,COG,0.2809,2012,
+Mosambik,MOZ,0.2786,2012,
+Malawi,MWI,0.274,2012,
+Myanmar,MMR,0.2703,2012,
+Gambie,GMB,0.2688,2012,
+Nigérie,NGA,0.2676,2012,
+Senegal,SEN,0.2673,2012,
+Nepál,NPL,0.2664,2012,
+Sudan,SDN,0.261,2012,
+Pobřeží slonoviny,CIV,0.258,2012,
+Jemen,YEM,0.2472,2012,
+Šalamounovy ostrovy,,0.2416,2012,
+Libérie,LBR,0.2407,2012,
+Timor-Leste,TLS,0.2365,2012,
+Komory,COM,0.2358,2012,
+Etiopie,ETH,0.2306,2012,
+Burundi,BDI,0.2288,2012,
+Demokratická republika Kongo,COD,0.228,2012,
+Jižní Súdán,SSD,0.2239,2012,
+Džibutsko,DJI,0.2228,2012,
+Papua-Nová Guinea,PNG,0.2147,2012,
+Togo,TGO,0.2143,2012,
+Benin,BEN,0.2064,2012,
+Eritrea,ERI,0.2043,2012,
+Mauritánie,MRT,0.1996,2012,
+Guinea-Bissau,GNB,0.1945,2012,
+Mali,MLI,0.1857,2012,
+Afghánistán,AFG,0.1701,2012,
+Burkina Faso,,0.1578,2012,
+Sierra Leone,SLE,0.1557,2012,
+Haiti,HTI,0.1512,2012,
+Niger,NER,0.1119,2012,
+Čad,TCD,0.1092,2012,
+Somálsko,SOM,0.064,2012,
+Středoafrická republika,CAF,0,2012,
+Guinea,GIN,0,2012,
+Libye,LBY,0,2012,
+Jižní Korea,KOR,0.8785,2010,
+Spojené státy americké,USA,0.851,2010,
+Kanada,CAN,0.8448,2010,
+Spojené království,GBR,0.8147,2010,
+Holandsko,NLD,0.8097,2010,
+Norsko,NOR,0.802,2010,
+Dánsko,DNK,0.7872,2010,
+Austrálie,AUS,0.7863,2010,
+Španělsko,ESP,0.7516,2010,
+Francie,FRA,0.751,2010,
+Singapur,SGP,0.7476,2010,
+Švédsko,SWE,0.7474,2010,
+Bahrain,BHR,0.7363,2010,
+Nový Zéland,NZL,0.7311,2010,
+Německo,DEU,0.7309,2010,
+Belgie,BEL,0.7225,2010,
+Japonsko,JPN,0.7152,2010,
+Švýcarsko,CHE,0.7136,2010,
+Finsko,FIN,0.6967,2010,
+Estonsko,EST,0.6965,2010,
+Irsko,IRL,0.6866,2010,
+Island,ISL,0.6697,2010,
+Lichtenštejnsko,LIE,0.6694,2010,
+Rakousko,AUT,0.6679,2010,
+Lucembursko,LUX,0.6672,2010,
+Izrael,ISR,0.6552,2010,
+Maďarsko,HUN,0.6315,2010,
+Litva,LTU,0.6295,2010,
+Slovinsko,SVN,0.6243,2010,
+Malta,MLT,0.6129,2010,
+Kolumbie,COL,0.6125,2010,
+Malajsie,MYS,0.6101,2010,
+Česká republika,CZE,0.606,2010,
+Chile,CHL,0.6014,2010,
+Chorvatsko,HRV,0.5858,2010,
+Uruguay,URY,0.5848,2010,
+Lotyšsko,LVA,0.5826,2010,
+Itálie,ITA,0.58,2010,
+Portugalsko,PRT,0.5787,2010,
+Barbados,BRB,0.5714,2010,
+Řecko,GRC,0.5708,2010,
+Kypr,CYP,0.5705,2010,
+Slovensko,SVK,0.5639,2010,
+Bulharsko,BGR,0.559,2010,
+Polsko,POL,0.5582,2010,
+Kazachstán,KAZ,0.5578,2010,
+Rumunsko,ROU,0.5479,2010,
+Argentina,ARG,0.5467,2010,
+Spojené arabské emiráty,ARE,0.5349,2010,
+Kuvajt,KWT,0.529,2010,
+Jordán,JOR,0.5278,2010,
+Makedonie,MKD,0.5261,2010,
+Mongolsko,MNG,0.5243,2010,
+Ukrajina,UKR,0.5181,2010,
+Antigua a Barbuda,0,0.5154,2010,
+Mexiko,MEX,0.515,2010,
+Andorra,AND,0.5148,2010,
+Saudská arábie,SAU,0.5142,2010,
+Rusko,RUS,0.5136,2010,
+Černá Hora,MNE,0.5101,2010,
+Brazílie,BRA,0.5006,2010,
+Katar,QAT,0.4928,2010,
+Peru,PER,0.4923,2010,
+Bělorusko,BLR,0.49,2010,
+Bahamské ostrovy,BHS,0.4871,2010,
+Tunisko,TUN,0.4826,2010,
+Trinidad a Tobago,TTO,0.4806,2010,
+Brunej,BRN,0.4796,2010,
+Turecko,TUR,0.478,2010,
+Venezuela,VEN,0.4774,2010,
+Kostarika,CRI,0.4749,2010,
+Čína,CHN,0.47,2010,
+El Salvador,0,0.47,2010,
+Bosna a Hercegovina,BIH,0.4698,2010,
+Svatý Kryštof a Nevis,0,0.4691,2010,
+Thajsko,THA,0.4653,2010,
+Mauricius,MUS,0.4645,2010,
+Filipíny,PHL,0.4637,2010,
+Panama,PAN,0.4619,2010,
+Moldavsko,MDA,0.4611,2010,
+Srbsko,SRB,0.4585,2010,
+Omán,OMN,0.4576,2010,
+Ázerbajdžán,AZE,0.4571,2010,
+Dominikánská republika,0,0.4557,2010,
+Albánie,ALB,0.4519,2010,
+Egypt,EGY,0.4518,2010,
+Uzbekistán,UZB,0.4498,2010,
+Svatá Lucie,,0.4471,2010,
+Jamaica,JAM,0.4467,2010,
+Vietnam,VNM,0.4454,2010,
+Kyrgyzstán,KGZ,0.4417,2010,
+Maledivy,MDV,0.4392,2010,
+Libanon,LBN,0.4388,2010,
+Svatý Vincenc a Grenadiny,0,0.4355,2010,
+Ekvádor,ECU,0.4322,2010,
+Kuba,CUB,0.4321,2010,
+Jihoafrická republika,ZAF,0.4306,2010,
+Bolívie,BOL,0.428,2010,
+Grenada,GRD,0.4277,2010,
+Gruzie,GEO,0.4248,2010,
+Paraguay,PRY,0.4243,2010,
+Írán,IRN,0.4234,2010,
+Palau,PLW,0.4189,2010,
+Seychely,SYC,0.4179,2010,
+Dominika,DMA,0.4149,2010,
+Guyana,GUY,0.414,2010,
+Honduras,HND,0.4065,2010,
+Kapverdy,,0.4054,2010,
+Indonésie,IDN,0.4026,2010,
+Arménie,ARM,0.4025,2010,
+Srí Lanka,LKA,0.3995,2010,
+Guatemala,GTM,0.3937,2010,
+Fiji,FJI,0.3925,2010,
+Libye,LBY,0.3799,2010,
+Samoa,WSM,0.3742,2010,
+Tonga,TON,0.3697,2010,
+Botswana,BWA,0.3637,2010,
+Nikaragua,NIC,0.363,2010,
+Indie,IND,0.3567,2010,
+Belize,BLZ,0.3513,2010,
+Lesotho,LSO,0.3512,2010,
+Tádžikistán,TJK,0.3477,2010,
+Gabon,GAB,0.342,2010,
+Keňa,KEN,0.3338,2010,
+Namibie,NAM,0.3314,2010,
+Maroko,MAR,0.3287,2010,
+Surinam,SUR,0.3283,2010,
+Svatý Tomáš a Princův ostrov,0,0.3258,2010,
+Zimbabwe,ZWE,0.323,2010,
+Turkmenistán,TKM,0.3226,2010,
+Alžírsko,DZA,0.3181,2010,
+Angola,AGO,0.311,2010,
+Sýrie,SYR,0.3103,2010,
+Bangladéš,BGD,0.3028,2010,
+Kongo,COG,0.3019,2010,
+Irák,IRQ,0.2996,2010,
+Tanzanie,TZA,0.2926,2010,
+Rovníková Guinea,0,0.2902,2010,
+Madagaskar,MDG,0.289,2010,
+Kambodža,KHM,0.2878,2010,
+Myanmar,MMR,0.2818,2010,
+Uganda,UGA,0.2812,2010,
+Zambie,ZMB,0.281,2010,
+Pobřeží slonoviny,CIV,0.2805,2010,
+Svazijsko,,0.2757,2010,
+Pákistán,PAK,0.2755,2010,
+Ghana,GHA,0.2754,2010,
+Rwanda,RWA,0.2749,2010,
+Kamerun,CMR,0.2722,2010,
+Nigérie,NGA,0.2687,2010,
+Laos,LAO,0.2637,2010,
+Bhútán,BTN,0.2598,2010,
+Nepál,NPL,0.2568,2010,
+Sudan,SDN,0.2542,2010,
+Vanuatu,VUT,0.2521,2010,
+Šalamounovy ostrovy,,0.2445,2010,
+Mauritánie,MRT,0.2359,2010,
+Demokratická republika Kongo,COD,0.2357,2010,
+Malawi,MWI,0.2357,2010,
+Komory,COM,0.2327,2010,
+Mosambik,MOZ,0.2288,2010,
+Timor-Leste,TLS,0.2273,2010,
+Senegal,SEN,0.2241,2010,
+Jemen,YEM,0.2154,2010,
+Togo,TGO,0.215,2010,
+Libérie,LBR,0.2133,2010,
+Gambie,GMB,0.2117,2010,
+Afghánistán,AFG,0.2098,2010,
+Haiti,HTI,0.2074,2010,
+Džibutsko,DJI,0.2059,2010,
+Papua-Nová Guinea,PNG,0.2043,2010,
+Etiopie,ETH,0.2033,2010,
+Benin,BEN,0.2017,2010,
+Burundi,BDI,0.2014,2010,
+Eritrea,ERI,0.1859,2010,
+Mali,MLI,0.1815,2010,
+Sierra Leone,SLE,0.1697,2010,
+Burkina Faso,,0.1587,2010,
+Guinea-Bissau,GNB,0.1561,2010,
+Guinea,GIN,0.1426,2010,
+Středoafrická republika,CAF,0.1399,2010,
+Čad,TCD,0.1235,2010,
+Niger,NER,0.1098,2010,
