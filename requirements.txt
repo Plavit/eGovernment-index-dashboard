@@ -36,7 +36,6 @@ PySocks==1.7.1
 pywin32==223
 requests==2.22.0
 ruamel-yaml==0.15.46
-six==1.12.0
 tqdm==4.36.1
 urllib3==1.24.2
 win-inet-pton==1.1.0
