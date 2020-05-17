@@ -22,7 +22,6 @@ six==1.14.0
 Werkzeug==1.0.1
 asn1crypto==1.2.0
 certifi==2019.9.11
-cffi==1.13.0
 conda==4.7.12
 conda-package-handling==1.6.0
 cryptography==2.8
