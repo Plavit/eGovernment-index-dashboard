@@ -4,6 +4,7 @@ import dash_html_components as html
 import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
+import numpy as np
 
 
 def generate_table(dataframe, max_rows=10):
@@ -13,8 +14,17 @@ def generate_table(dataframe, max_rows=10):
         ),
         html.Tbody([
             html.Tr([
-                html.Td(dataframe.iloc[i][col]) for col in dataframe.columns
-            ]) for i in range(min(len(dataframe), max_rows))
+                html.Td(
+                    np.round(dataframe.iloc[i][col], 2)
+                ) if (isinstance(dataframe.iloc[i][col], float)) else (
+                    html.Td(
+                        dataframe.iloc[i][col]
+                    )
+                )
+
+                for col in dataframe.columns
+            ])
+            for i in range(min(len(dataframe), max_rows))
         ])
     ])
 
@@ -25,7 +35,7 @@ def generate_world_map(year):
 
     fig = go.Figure(data=go.Choropleth(
         locations=df['Code'],
-        z=filtered_df['eGov index'],
+        z=filtered_df['UN eGov index'],
         text=df['Czech name'],
 
         colorscale=[[0.0, "rgb(0,150,50)"],
@@ -49,7 +59,7 @@ def generate_world_map(year):
 
     fig.update_layout(
         height=1000,
-        title_text=str(year) + ' eGovernment index',
+        title_text=' eGovernment index OSN z roku ' + str(year),
         geo=dict(
             showframe=False,
             showcoastlines=False,
@@ -61,8 +71,7 @@ def generate_world_map(year):
             xref='paper',
             yref='paper',
             # TODO fix source
-            text='Source: <a href="https://www.cia.gov/library/publications/the-world-factbook/fields/2195.html">\
-                CIA World Factbook</a>',
+            text='Zdroj: <a href="https://publicadministration.un.org/egovkb/">Organizace spojených národů</a>',
             showarrow=False
         )]
     )
@@ -73,17 +82,17 @@ def generate_europe_map(df, year):
     filtered_df = df[df.Year == year]
 
     figeu = go.Figure(data=go.Choropleth(
-        locations=df['Code'],
-        z=filtered_df['eGov index'],
-        text=df['Czech name'],
+        locations=filtered_df['Code'],
+        z=filtered_df['EU eGov index'],
+        text=filtered_df['Czech name'],
 
         colorscale=[[0.0, "rgb(0,150,50)"],
                     [0.3, "rgb(250,240,110)"],
                     [0.6, "rgb(180,60,50)"],
                     [1.0, "rgb(80,20,80)"]],
         # Note - this fixes min and max points on colorscale to make years comparable
-        zmin=0,
-        zmax=1,
+        zmin=10,
+        zmax=90,
         autocolorscale=False,
         reversescale=True,
         marker_line_color='darkgray',
@@ -101,7 +110,7 @@ def generate_europe_map(df, year):
 
     figeu.update_layout(
         height=1000,
-        title_text=str(year) + ' eGovernment index',
+        title_text=' eGovernment index EU z roku ' + str(year),
         geo=dict(
             showframe=False,
             showcoastlines=False,
@@ -113,10 +122,17 @@ def generate_europe_map(df, year):
             xref='paper',
             yref='paper',
             # TODO fix source
-            text='Source: <a href="https://www.cia.gov/library/publications/the-world-factbook/fields/2195.html">\
-                CIA World Factbook</a>',
+            text='Zdroj: <a href="https://ec.europa.eu/newsroom/dae/document.cfm?doc_id=62371">\
+                Evropská unie</a>',
             showarrow=False
         )],
         margin={"r": 0, "t": 0, "l": 0, "b": 0},
     )
     return figeu
+
+
+# TODO needs fixing
+def generate_correlation(df1, df2):
+    df = df1.append(df2)
+    fig = px.scatter(df, x="UN eGov index", y="EU eGov index", color="Code", hover_data=['Czech name'])
+    return fig
