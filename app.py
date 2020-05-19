@@ -6,10 +6,11 @@ import dash_html_components as html
 import plotly.graph_objects as go
 import pandas as pd
 import numpy as np
+import pathlib
 
 from dash.dependencies import Input, Output
 from urllib.parse import quote as urlquote
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, send_file
 
 from generators import generate_table, generate_world_map, generate_europe_map, generate_correlation
 
@@ -23,12 +24,12 @@ df = pd.read_csv('data/{}'.format(DATA_UN))
 dfeu = pd.read_csv('data/{}'.format(DATA_EU))
 
 filtered_df = pd.DataFrame(df[df.Year == 2018], columns=['Czech name', 'UN eGov index'])
-#Adding rank and percentile
+# Adding rank and percentile
 filtered_df['Pořadí'] = filtered_df['UN eGov index'].rank(method='max')
 filtered_df['Percentil'] = filtered_df['UN eGov index'].rank(pct=True)
 
 # This is basically here only to use NumPy more than once ¯\_(ツ)_/¯
-df['log of index'] = np.round(np.log(df['UN eGov index']), 2)if not df['UN eGov index'].isnull else 0
+df['log of index'] = np.round(np.log(df['UN eGov index']), 2) if not df['UN eGov index'].isnull else 0
 
 # Normally, Dash creates its own Flask server internally. By creating our own,
 # we can create a route for downloading files directly:
@@ -37,12 +38,13 @@ server = Flask(__name__)
 
 @server.route("/data/<path:path>")
 def download(path):
-    """Serve a file from the upload directory."""
-    return send_from_directory("/data", path, mimetype='text/csv',
-                               attachment_filename='downloadFile.csv', as_attachment=True)
+    """Downloads the desired file from the data folder."""
+    return send_file('data/'+path,
+                     mimetype='text/csv',
+                     attachment_filename=path,
+                     as_attachment=True)
 
-
-# TODO fix download link
+# Download link generation
 def file_download_link(filename):
     """Creates a Plotly Dash 'A' element that downloads a file from the app."""
     location = "/data/{}".format(urlquote(filename))
@@ -120,8 +122,8 @@ app.layout = html.Div(children=[
     # html.Div(children=[
     #     html.Label('Korelace'),
     #     dcc.Graph(id='correlation', figure=generate_correlation(df, dfeu)),
-    #
     # ], style={'columnCount': 1}),
+
 ], style={'columnCount': 1})
 
 
@@ -142,6 +144,14 @@ def update_world_map(selected_year):
     [Input('year-slider-2', 'value')])
 def update_europe_map(selected_year):
     return generate_europe_map(dfeu, selected_year)
+
+
+@app.server.route('/dash/urlToDownload')
+def download_csv():
+    return send_file('data/eur-t2.csv',
+                     mimetype='text/csv',
+                     attachment_filename='downloadFile.csv',
+                     as_attachment=True)
 
 
 if __name__ == '__main__':

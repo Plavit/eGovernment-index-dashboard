@@ -134,5 +134,6 @@ def generate_europe_map(df, year):
 # TODO needs fixing
 def generate_correlation(df1, df2):
     df = df1.append(df2)
+    print(df)
     fig = px.scatter(df, x="UN eGov index", y="EU eGov index", color="Code", hover_data=['Czech name'])
     return fig
