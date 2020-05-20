@@ -20,14 +20,21 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 DATA_UN = 'eGov-t4.csv'
 DATA_EU = 'eur-t2.csv'
 
-
 df = pd.read_csv('data/{}'.format(DATA_UN))
 dfeu = pd.read_csv('data/{}'.format(DATA_EU))
 
-filtered_df = pd.DataFrame(df[df.Year == 2018], columns=['Czech name', 'UN eGov index'])
+filtered_df = pd.DataFrame(df[df.Year == df['Year'].max()], columns=['Czech name', 'UN eGov index'])
 # Adding rank and percentile
 filtered_df['Pořadí'] = filtered_df['UN eGov index'].rank(method='max')
 filtered_df['Percentil'] = filtered_df['UN eGov index'].rank(pct=True)
+filtered_df = filtered_df[['Pořadí', 'Czech name', 'UN eGov index', 'Percentil']]
+filtered_df = filtered_df.rename(columns={'Czech name': 'Země', 'UN eGov index': 'index eGovernmentu OSN'})
+
+filtered_df_eu = pd.DataFrame(dfeu[dfeu.Year == dfeu['Year'].max()], columns=['Czech name', 'EU eGov index'])
+# Adding rank and percentile
+filtered_df_eu['Pořadí'] = filtered_df_eu['EU eGov index'].rank(method='max')
+filtered_df_eu['Percentil'] = filtered_df_eu['EU eGov index'].rank(pct=True)
+filtered_df_eu = filtered_df_eu[['Pořadí', 'Czech name', 'EU eGov index', 'Percentil']]
 
 # This is basically here only to use NumPy more than once ¯\_(ツ)_/¯
 df['log of index'] = np.round(np.log(df['UN eGov index']), 2) if not df['UN eGov index'].isnull else 0
@@ -40,10 +47,11 @@ server = Flask(__name__)
 @server.route("/data/<path:path>")
 def download(path):
     """Downloads the desired file from the data folder."""
-    return send_file('data/'+path,
+    return send_file('data/' + path,
                      mimetype='text/csv',
                      attachment_filename=path,
                      as_attachment=True)
+
 
 # Download link generation
 def file_download_link(filename):
@@ -66,7 +74,7 @@ app.layout = html.Div(children=[
     # TODO create map callback to reset zoom if user zooms out too much
     html.Div(children=[
 
-        dcc.Graph(id='world-map-with-slider', figure=generate_world_map(df,df['Year'].max())),
+        dcc.Graph(id='world-map-with-slider', figure=generate_world_map(df, df['Year'].max())),
 
         html.Label('Výběr roku'),
         dcc.Slider(
@@ -85,7 +93,7 @@ app.layout = html.Div(children=[
         children=[
             html.H4(
                 id='top-20-title',
-                children='TOP 20 eGov selected year'),
+                children='TOP 20 zemí světa v roce ' + str(df['Year'].max())),
             html.Div(
                 id='top-20-table',
                 children=[
@@ -101,7 +109,7 @@ app.layout = html.Div(children=[
 
     html.Div(children=[
 
-        dcc.Graph(id='europe-map-with-slider', figure=generate_europe_map(dfeu, dfeu['Year'].max(),)),
+        dcc.Graph(id='europe-map-with-slider', figure=generate_europe_map(dfeu, dfeu['Year'].max(), )),
 
         dcc.Slider(
             id='year-slider-2',
@@ -119,6 +127,24 @@ app.layout = html.Div(children=[
         )
     ], style={'columnCount': 1}),
 
+    html.Div(
+        children=[
+            html.H4(
+                id='top-10-title-eu',
+                children='TOP 10 zemí EU v roce ' + str(dfeu['Year'].max())),
+            html.Div(
+                id='top-10-table-eu',
+                children=[
+                    generate_table(filtered_df_eu, 10)
+                ], style={'columnCount': 3}),
+            html.Div(
+                children=[
+                    file_download_link(DATA_UN)
+                ]
+            )
+        ],
+    ),
+
     # TODO fix correlation
     # html.Div(children=[
     #     html.Label('Korelace'),
@@ -129,6 +155,7 @@ app.layout = html.Div(children=[
 
 app.title = 'eGovernment benchmark'
 
+
 @app.callback(
     [Output('world-map-with-slider', 'figure'),
      Output('top-20-title', 'children'),
@@ -138,14 +165,25 @@ def update_world_map(selected_year):
     filtered_df = pd.DataFrame(df[df.Year == selected_year], columns=['Czech name', 'UN eGov index'])
     filtered_df['Pořadí'] = filtered_df['UN eGov index'].rank(method='max', ascending=False)
     filtered_df['Percentil'] = filtered_df['UN eGov index'].rank(pct=True)
-    return generate_world_map(df, selected_year), "TOP 20 eGov " + str(selected_year), generate_table(filtered_df, 20)
+    filtered_df = filtered_df[['Pořadí', 'Czech name', 'UN eGov index', 'Percentil']]
+    filtered_df = filtered_df.rename(columns={'Czech name': 'Země', 'UN eGov index': 'index eGovernmentu OSN'})
+    return generate_world_map(df, selected_year), 'TOP 20 zemí světa v roce ' + str(selected_year), generate_table(
+        filtered_df, 20)
 
 
 @app.callback(
-    Output('europe-map-with-slider', 'figure'),
+    [Output('europe-map-with-slider', 'figure'),
+     Output('top-10-title-eu', 'children'),
+     Output('top-10-table-eu', 'children')],
     [Input('year-slider-2', 'value')])
 def update_europe_map(selected_year):
-    return generate_europe_map(dfeu, selected_year)
+    filtered_df_eu = pd.DataFrame(dfeu[dfeu.Year == selected_year], columns=['Czech name', 'EU eGov index'])
+    filtered_df_eu['Pořadí'] = filtered_df_eu['EU eGov index'].rank(method='max')
+    filtered_df_eu['Percentil'] = filtered_df_eu['EU eGov index'].rank(pct=True)
+    filtered_df_eu = filtered_df_eu[['Pořadí', 'Czech name', 'EU eGov index', 'Percentil']]
+    filtered_df_eu = filtered_df_eu.rename(columns={'Czech name': 'Země', 'EU eGov index': 'index eGovernmentu EU'})
+    return generate_europe_map(dfeu, selected_year), 'TOP 10 zemí EU v roce ' + str(selected_year), generate_table(
+        filtered_df_eu, 10)
 
 
 @app.server.route('/dash/urlToDownload')
