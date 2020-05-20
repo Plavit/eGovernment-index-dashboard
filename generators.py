@@ -29,14 +29,13 @@ def generate_table(dataframe, max_rows=10):
     ])
 
 
-def generate_world_map(year):
-    df = pd.read_csv('data/eGov-t3.csv')
+def generate_world_map(df, year):
     filtered_df = df[df.Year == year]
 
     fig = go.Figure(data=go.Choropleth(
-        locations=df['Code'],
+        locations=filtered_df['Code'],
         z=filtered_df['UN eGov index'],
-        text=df['Czech name'],
+        text=filtered_df['Czech name'],
 
         colorscale=[[0.0, "rgb(0,150,50)"],
                     [0.3, "rgb(250,240,110)"],

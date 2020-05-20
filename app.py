@@ -17,8 +17,9 @@ from generators import generate_table, generate_world_map, generate_europe_map, 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 # Used dataset names
-DATA_UN = 'eGov-t3.csv'
+DATA_UN = 'eGov-t4.csv'
 DATA_EU = 'eur-t2.csv'
+
 
 df = pd.read_csv('data/{}'.format(DATA_UN))
 dfeu = pd.read_csv('data/{}'.format(DATA_EU))
@@ -65,7 +66,7 @@ app.layout = html.Div(children=[
     # TODO create map callback to reset zoom if user zooms out too much
     html.Div(children=[
 
-        dcc.Graph(id='world-map-with-slider', figure=generate_world_map(2018)),
+        dcc.Graph(id='world-map-with-slider', figure=generate_world_map(df,df['Year'].max())),
 
         html.Label('Výběr roku'),
         dcc.Slider(
@@ -100,7 +101,7 @@ app.layout = html.Div(children=[
 
     html.Div(children=[
 
-        dcc.Graph(id='europe-map-with-slider', figure=generate_europe_map(dfeu, 2018)),
+        dcc.Graph(id='europe-map-with-slider', figure=generate_europe_map(dfeu, dfeu['Year'].max(),)),
 
         dcc.Slider(
             id='year-slider-2',
@@ -126,6 +127,7 @@ app.layout = html.Div(children=[
 
 ], style={'columnCount': 1})
 
+app.title = 'eGovernment benchmark'
 
 @app.callback(
     [Output('world-map-with-slider', 'figure'),
@@ -136,7 +138,7 @@ def update_world_map(selected_year):
     filtered_df = pd.DataFrame(df[df.Year == selected_year], columns=['Czech name', 'UN eGov index'])
     filtered_df['Pořadí'] = filtered_df['UN eGov index'].rank(method='max', ascending=False)
     filtered_df['Percentil'] = filtered_df['UN eGov index'].rank(pct=True)
-    return generate_world_map(selected_year), "TOP 20 eGov " + str(selected_year), generate_table(filtered_df, 20)
+    return generate_world_map(df, selected_year), "TOP 20 eGov " + str(selected_year), generate_table(filtered_df, 20)
 
 
 @app.callback(
