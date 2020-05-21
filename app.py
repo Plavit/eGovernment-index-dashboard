@@ -165,6 +165,7 @@ def update_world_map(selected_year):
     filtered_df = pd.DataFrame(df[df.Year == selected_year], columns=['Czech name', 'UN eGov index'])
     filtered_df['Pořadí'] = filtered_df['UN eGov index'].rank(method='max', ascending=False)
     filtered_df['Percentil'] = filtered_df['UN eGov index'].rank(pct=True)
+    filtered_df['Percentil'] = (filtered_df['Percentil'] * 100).round(1).astype(str) + '%'
     filtered_df = filtered_df[['Pořadí', 'Czech name', 'UN eGov index', 'Percentil']]
     filtered_df = filtered_df.rename(columns={'Czech name': 'Země', 'UN eGov index': 'index eGovernmentu OSN'})
     return generate_world_map(df, selected_year), 'TOP 20 zemí světa v roce ' + str(selected_year), generate_table(
@@ -178,10 +179,12 @@ def update_world_map(selected_year):
     [Input('year-slider-2', 'value')])
 def update_europe_map(selected_year):
     filtered_df_eu = pd.DataFrame(dfeu[dfeu.Year == selected_year], columns=['Czech name', 'EU eGov index'])
-    filtered_df_eu['Pořadí'] = filtered_df_eu['EU eGov index'].rank(method='max')
+    filtered_df_eu['Pořadí'] = filtered_df_eu['EU eGov index'].rank(method='max', ascending=False)
     filtered_df_eu['Percentil'] = filtered_df_eu['EU eGov index'].rank(pct=True)
+    filtered_df_eu['Percentil'] = (filtered_df_eu['Percentil'] * 100).round(1).astype(str) + '%'
     filtered_df_eu = filtered_df_eu[['Pořadí', 'Czech name', 'EU eGov index', 'Percentil']]
     filtered_df_eu = filtered_df_eu.rename(columns={'Czech name': 'Země', 'EU eGov index': 'index eGovernmentu EU'})
+    filtered_df_eu = filtered_df_eu.sort_values('index eGovernmentu EU', ascending=False)
     return generate_europe_map(dfeu, selected_year), 'TOP 10 zemí EU v roce ' + str(selected_year), generate_table(
         filtered_df_eu, 10)
 
