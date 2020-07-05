@@ -74,6 +74,18 @@ def generate_world_map(df, year):
             showarrow=False
         )]
     )
+
+    # Add logo to figure
+    fig.add_layout_image(
+        dict(
+            source="assets/logo-icon.png",
+            xref="paper", yref="paper",
+            x=1.08, y=1.0,
+            sizex=0.5, sizey=0.1,
+            xanchor="right", yanchor="bottom"
+        )
+    )
+
     return fig
 
 
@@ -126,6 +138,17 @@ def generate_europe_map(df, year):
             showarrow=False
         )],
         margin={"r": 0, "t": 0, "l": 0, "b": 0},
+    )
+
+    # Add logo to figure
+    figeu.add_layout_image(
+        dict(
+            source="assets/logo-icon.png",
+            xref="paper", yref="paper",
+            x=1.08, y=1.0,
+            sizex=0.5, sizey=0.1,
+            xanchor="right", yanchor="bottom"
+        )
     )
     return figeu
 

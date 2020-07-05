@@ -57,101 +57,150 @@ def download(path):
 def file_download_link(filename):
     """Creates a Plotly Dash 'A' element that downloads a file from the app."""
     location = "/data/{}".format(urlquote(filename))
-    return html.A("Stáhnout dataset: " + filename, href=location)
+    return html.A("Stáhnout kompletní dataset: " + filename, href=location)
 
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets, server=server)
 
 server = app.server
 
-app.layout = html.Div(children=[
-    html.H1(children='eGovernment index viewer'),
+app.layout = html.Div(
+    children=[
+        html.Div(
+            [
+                html.Div(
+                    [
+                        html.Img(
+                            src='assets/Logo-text.png',
+                            draggable='False',
+                            id="logo",
+                            height=150,
+                            width='auto'
+                        ),
+                    ],
+                    className="two columns",
+                ),
+                html.Div(
+                    [
 
-    html.Div(children='''
-        Jednoduchý přehled hodnot z indexů eGovernmentu od OSN a EU
-    '''),
+                        html.H3(
+                            "Přehled eGov indexů",
+                            style={"margin-bottom": "0px"},
+                        ),
+                        html.H5(
+                            "Jednoduchý přehled hodnot z indexů eGovernmentu od OSN a EU",
+                            style={"margin-top": "0px"}
+                        ),
 
-    # TODO create map callback to reset zoom if user zooms out too much
-    html.Div(children=[
-
-        dcc.Graph(id='world-map-with-slider', figure=generate_world_map(df, df['Year'].max())),
-
-        html.Label('Výběr roku'),
-        dcc.Slider(
-            id='year-slider',
-            min=df['Year'].min(),
-            max=df['Year'].max(),
-            value=df['Year'].max(),
-            marks={str(year): 'Rok {}'.format(year) if year == df['Year'].min() else str(year) for year in
-                   df['Year'].unique()},
-            step=None
+                    ],
+                    className="eight columns",
+                    id="title",
+                ),
+                html.Div(
+                    [
+                        html.A(
+                            html.Button("Kontaktovat autora", id="contact-button"),
+                            href="mailto:marek.szeles@eforce.cvut.cz",
+                        )
+                    ],
+                    className="two columns",
+                    id="button",
+                ),
+            ],
+            id="header",
+            className="row flex-display",
+            style={"margin-bottom": "25px"},
         ),
 
-    ], style={'columnCount': 1}),
+        html.Div(
+            [
+                # TODO create map callback to reset zoom if user zooms out too much
+                html.Div(
+                    children=[
+                        dcc.Graph(id='world-map-with-slider', figure=generate_world_map(df, df['Year'].max())),
 
-    html.Div(
-        children=[
-            html.H4(
-                id='top-20-title',
-                children='TOP 20 zemí světa v roce ' + str(df['Year'].max())),
-            html.Div(
-                id='top-20-table',
-                children=[
-                    generate_table(filtered_df, 20)
-                ], style={'columnCount': 4}),
-            html.Div(
-                children=[
-                    file_download_link(DATA_UN)
-                ]
-            )
-        ],
-    ),
+                        html.Label('Výběr roku'),
+                        dcc.Slider(
+                            id='year-slider',
+                            min=df['Year'].min(),
+                            max=df['Year'].max(),
+                            value=df['Year'].max(),
+                            marks={str(year): 'Rok {}'.format(year) if year == df['Year'].min() else str(year) for year
+                                   in
+                                   df['Year'].unique()},
+                            step=None
+                        ),
 
-    html.Div(children=[
+                    ],
+                    style={'columnCount': 1},
+                    className="pretty_container nine columns",
+                ),
 
-        dcc.Graph(id='europe-map-with-slider', figure=generate_europe_map(dfeu, dfeu['Year'].max(), )),
-
-        dcc.Slider(
-            id='year-slider-2',
-            min=dfeu['Year'].min(),
-            max=dfeu['Year'].max(),
-            value=dfeu['Year'].max(),
-            marks={str(year): 'Rok {}'.format(year) if year == df['Year'].min() else str(year) for year in
-                   dfeu['Year'].unique()},
-            step=None
+                html.Div(
+                    children=[
+                        html.H4(
+                            id='top-20-title',
+                            children='TOP 20 zemí světa v roce ' + str(df['Year'].max())),
+                        html.Div(
+                            id='top-20-table',
+                            children=[
+                                generate_table(filtered_df, 20)
+                            ], style={'columnCount': 1}),
+                        html.Div(
+                            children=[
+                                file_download_link(DATA_UN)
+                            ]
+                        )
+                    ],
+                    className="pretty_container three columns",
+                ),
+            ],
+            className="row flex-display",
         ),
+
+        html.Div(children=[
+
+            dcc.Graph(id='europe-map-with-slider', figure=generate_europe_map(dfeu, dfeu['Year'].max(), )),
+
+            dcc.Slider(
+                id='year-slider-2',
+                min=dfeu['Year'].min(),
+                max=dfeu['Year'].max(),
+                value=dfeu['Year'].max(),
+                marks={str(year): 'Rok {}'.format(year) if year == df['Year'].min() else str(year) for year in
+                       dfeu['Year'].unique()},
+                step=None
+            ),
+        ], style={'columnCount': 1}),
+
         html.Div(
             children=[
-                file_download_link(DATA_EU)
-            ]
-        )
-    ], style={'columnCount': 1}),
+                html.H4(
+                    id='top-10-title-eu',
+                    children='TOP 10 zemí EU v roce ' + str(dfeu['Year'].max())),
+                html.Div(
+                    id='top-10-table-eu',
+                    children=[
+                        generate_table(filtered_df_eu, 10)
+                    ], style={'columnCount': 3}),
+                html.Div(
+                    children=[
+                        file_download_link(DATA_EU)
+                    ]
+                )
+            ],
+        ),
 
-    html.Div(
-        children=[
-            html.H4(
-                id='top-10-title-eu',
-                children='TOP 10 zemí EU v roce ' + str(dfeu['Year'].max())),
-            html.Div(
-                id='top-10-table-eu',
-                children=[
-                    generate_table(filtered_df_eu, 10)
-                ], style={'columnCount': 3}),
-            html.Div(
-                children=[
-                    file_download_link(DATA_UN)
-                ]
-            )
-        ],
-    ),
+        # TODO fix correlation
+        # html.Div(children=[
+        #     html.Label('Korelace'),
+        #     dcc.Graph(id='correlation', figure=generate_correlation(df, dfeu)),
+        # ], style={'columnCount': 1}),
 
-    # TODO fix correlation
-    # html.Div(children=[
-    #     html.Label('Korelace'),
-    #     dcc.Graph(id='correlation', figure=generate_correlation(df, dfeu)),
-    # ], style={'columnCount': 1}),
-
-], style={'columnCount': 1})
+    ],
+    id="mainContainer",
+    style={'columnCount': 1, "display": "flex", "flex-direction": "column"},
+)
 
 app.title = 'eGovernment benchmark'
 
@@ -187,14 +236,6 @@ def update_europe_map(selected_year):
     filtered_df_eu = filtered_df_eu.sort_values('index eGovernmentu EU', ascending=False)
     return generate_europe_map(dfeu, selected_year), 'TOP 10 zemí EU v roce ' + str(selected_year), generate_table(
         filtered_df_eu, 10)
-
-
-@app.server.route('/dash/urlToDownload')
-def download_csv():
-    return send_file('data/eur-t2.csv',
-                     mimetype='text/csv',
-                     attachment_filename='downloadFile.csv',
-                     as_attachment=True)
 
 
 if __name__ == '__main__':
