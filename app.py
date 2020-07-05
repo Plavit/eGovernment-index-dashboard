@@ -28,7 +28,7 @@ filtered_df = pd.DataFrame(df[df.Year == df['Year'].max()], columns=['Czech name
 filtered_df['Pořadí'] = filtered_df['UN eGov index'].rank(method='max')
 filtered_df['Percentil'] = filtered_df['UN eGov index'].rank(pct=True)
 filtered_df = filtered_df[['Pořadí', 'Czech name', 'UN eGov index', 'Percentil']]
-filtered_df = filtered_df.rename(columns={'Czech name': 'Země', 'UN eGov index': 'index eGovernmentu OSN'})
+filtered_df = filtered_df.rename(columns={'Czech name': 'Země', 'UN eGov index': 'eGov index OSN'})
 
 filtered_df_eu = pd.DataFrame(dfeu[dfeu.Year == dfeu['Year'].max()], columns=['Czech name', 'EU eGov index'])
 # Adding rank and percentile
@@ -57,7 +57,15 @@ def download(path):
 def file_download_link(filename):
     """Creates a Plotly Dash 'A' element that downloads a file from the app."""
     location = "/data/{}".format(urlquote(filename))
-    return html.A("Stáhnout kompletní dataset: " + filename, href=location)
+    return html.Div(
+        [
+            html.A(
+                html.Button("Stáhnout kompletní dataset: " + filename),
+                href=location,
+            )
+        ],
+        className="two columns",
+    )
 
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets, server=server)
@@ -216,7 +224,7 @@ def update_world_map(selected_year):
     filtered_df['Percentil'] = filtered_df['UN eGov index'].rank(pct=True)
     filtered_df['Percentil'] = (filtered_df['Percentil'] * 100).round(1).astype(str) + '%'
     filtered_df = filtered_df[['Pořadí', 'Czech name', 'UN eGov index', 'Percentil']]
-    filtered_df = filtered_df.rename(columns={'Czech name': 'Země', 'UN eGov index': 'index eGovernmentu OSN'})
+    filtered_df = filtered_df.rename(columns={'Czech name': 'Země', 'UN eGov index': 'index eGov OSN'})
     return generate_world_map(df, selected_year), 'TOP 20 zemí světa v roce ' + str(selected_year), generate_table(
         filtered_df, 20)
 
@@ -232,8 +240,8 @@ def update_europe_map(selected_year):
     filtered_df_eu['Percentil'] = filtered_df_eu['EU eGov index'].rank(pct=True)
     filtered_df_eu['Percentil'] = (filtered_df_eu['Percentil'] * 100).round(1).astype(str) + '%'
     filtered_df_eu = filtered_df_eu[['Pořadí', 'Czech name', 'EU eGov index', 'Percentil']]
-    filtered_df_eu = filtered_df_eu.rename(columns={'Czech name': 'Země', 'EU eGov index': 'index eGovernmentu EU'})
-    filtered_df_eu = filtered_df_eu.sort_values('index eGovernmentu EU', ascending=False)
+    filtered_df_eu = filtered_df_eu.rename(columns={'Czech name': 'Země', 'EU eGov index': 'index eGov EU'})
+    filtered_df_eu = filtered_df_eu.sort_values('index eGov EU', ascending=False)
     return generate_europe_map(dfeu, selected_year), 'TOP 10 zemí EU v roce ' + str(selected_year), generate_table(
         filtered_df_eu, 10)
 
