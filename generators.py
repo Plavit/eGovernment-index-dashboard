@@ -69,7 +69,6 @@ def generate_world_map(df, year):
             y=0.01,
             xref='paper',
             yref='paper',
-            # TODO fix source
             text='Zdroj: <a href="https://publicadministration.un.org/egovkb/">Organizace spojených národů</a>',
             showarrow=False
         )]
@@ -132,7 +131,6 @@ def generate_europe_map(df, year):
             y=0.01,
             xref='paper',
             yref='paper',
-            # TODO fix source
             text='Zdroj: <a href="https://ec.europa.eu/newsroom/dae/document.cfm?doc_id=62371">\
                 Evropská unie</a>',
             showarrow=False
@@ -153,9 +151,3 @@ def generate_europe_map(df, year):
     return figeu
 
 
-# TODO needs fixing
-def generate_correlation(df1, df2):
-    df = df1.append(df2)
-    print(df)
-    fig = px.scatter(df, x="UN eGov index", y="EU eGov index", color="Code", hover_data=['Czech name'])
-    return fig

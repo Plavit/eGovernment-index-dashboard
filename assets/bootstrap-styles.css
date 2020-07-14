@@ -194,7 +194,7 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+  font-family: "Trebuchet MS", Trebuchet,
     sans-serif;
   color: rgb(50, 50, 50);
 }
@@ -209,7 +209,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 0;
-  font-weight: 300;
+  font-weight: 600;
 }
 h1 {
   font-size: 4.5rem;
@@ -554,6 +554,9 @@ there.
   }
   .seven.columns {
     width: calc(100% * 7 / 12);
+  }
+  .eight.columns {
+    width: 66%;
   }
 }
 

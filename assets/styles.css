@@ -1,17 +1,34 @@
 /* CSS Heavily inspired by Dash Plotly sample dashboard here: https://dash-gallery.plotly.host/dash-oil-and-gas/ */
 
+.js-plotly-plot .plotly .modebar {
+  padding-top: 5%;
+  margin-right: 3.5%;
+}
+
 body {
-  background-color: #f2f2f2;
+  background-color: #f0f0f0;
   margin: 5%;
 }
 
-.two.columns {
-  width: 16.25%;
+.slider{
+  margin-bottom: 40px;
 }
+
+
 
 .column,
 .columns {
   margin-left: 0.5%;
+  width: auto;
+}
+
+.pretty_container_bg {
+  border-radius: 5px;
+  background-color: #f6f6f6;
+  margin: 10px;
+  padding: 15px;
+  position: relative;
+  box-shadow: 2px 2px 2px lightgrey;
 }
 
 .pretty_container {
@@ -21,19 +38,35 @@ body {
   padding: 15px;
   position: relative;
   box-shadow: 2px 2px 2px lightgrey;
+  text-align: center;
 }
 
 .mini_container {
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   margin: 10px;
   padding: 15px;
   position: relative;
   box-shadow: 2px 2px 2px lightgrey;
+  flex: 1;
 }
 
 .flex-display {
   display: flex;
+}
+
+.content_holder {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.description{
+  text-align: left;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
 }
 
 #mainContainer {
@@ -48,3 +81,5 @@ body {
 #header {
   align-items: center;
 }
+
+
