@@ -25,16 +25,19 @@ dfeu = pd.read_csv('data/{}'.format(DATA_EU))
 
 filtered_df = pd.DataFrame(df[df.Year == df['Year'].max()], columns=['Czech name', 'UN eGov index'])
 # Adding rank and percentile
-filtered_df['Pořadí'] = filtered_df['UN eGov index'].rank(method='max')
+filtered_df['Pořadí'] = filtered_df['UN eGov index'].rank(method='max', ascending=False)
 filtered_df['Percentil'] = filtered_df['UN eGov index'].rank(pct=True)
+filtered_df['Percentil'] = (filtered_df['Percentil'] * 100).round(1).astype(str) + '%'
 filtered_df = filtered_df[['Pořadí', 'Czech name', 'UN eGov index', 'Percentil']]
-filtered_df = filtered_df.rename(columns={'Czech name': 'Země', 'UN eGov index': 'eGov index OSN'})
+filtered_df = filtered_df.rename(columns={'Czech name': 'Země','UN eGov index': 'index eGov OSN'})
 
 filtered_df_eu = pd.DataFrame(dfeu[dfeu.Year == dfeu['Year'].max()], columns=['Czech name', 'EU eGov index'])
 # Adding rank and percentile
-filtered_df_eu['Pořadí'] = filtered_df_eu['EU eGov index'].rank(method='max')
+filtered_df_eu['Pořadí'] = filtered_df_eu['EU eGov index'].rank(method='max', ascending=False)
 filtered_df_eu['Percentil'] = filtered_df_eu['EU eGov index'].rank(pct=True)
+filtered_df_eu['Percentil'] = (filtered_df_eu['Percentil'] * 100).round(1).astype(str) + '%'
 filtered_df_eu = filtered_df_eu[['Pořadí', 'Czech name', 'EU eGov index', 'Percentil']]
+filtered_df_eu = filtered_df_eu.rename(columns={'Czech name': 'Země', 'EU eGov index': 'index eGov EU'})
 
 # This is basically here only to use NumPy more than once ¯\_(ツ)_/¯
 df['log of index'] = np.round(np.log(df['UN eGov index']), 2) if not df['UN eGov index'].isnull else 0
@@ -64,6 +67,7 @@ def file_download_link(filename):
                 href=location,
             )
         ],
+        className="download-button"
     )
 
 
@@ -179,19 +183,19 @@ app.layout = html.Div(
                                         html.Div(
                                             [
                                                 html.Div(
-                                                    [html.H6("N/A", id="un_rank_value"),
+                                                    [html.H6(str(int(filtered_df.loc[filtered_df['Země'] == 'Česká republika']['Pořadí']))+". místo", id="un_rank_value"),
                                                      html.P("Pořadí ČR", id="un_rank_text")],
                                                     id="un_rank",
                                                     className="mini_container",
                                                 ),
                                                 html.Div(
-                                                    [html.H6("N/A", id="un_score_value"),
+                                                    [html.H6(str(np.round(float(filtered_df.loc[filtered_df['Země'] == 'Česká republika']['index eGov OSN']),3))+"", id="un_score_value"),
                                                      html.P("Skóre ČR", id="un_score_text")],
                                                     id="un_score",
                                                     className="mini_container",
                                                 ),
                                                 html.Div(
-                                                    [html.H6("N/A", id="un_percentile_value"),
+                                                    [html.H6(filtered_df.loc[filtered_df['Země'] == 'Česká republika']['Percentil']+"", id="un_percentile_value"),
                                                      html.P("Percentil ČR", id="un_percentile_text")],
                                                     id="un_percentile",
                                                     className="mini_container",
@@ -289,19 +293,19 @@ html.Div(
                                         html.Div(
                                             [
                                                 html.Div(
-                                                    [html.H6("N/A", id="eu_rank_value"),
+                                                    [html.H6(str(int(filtered_df_eu.loc[filtered_df_eu['Země'] == 'Česká republika']['Pořadí']))+". místo", id="eu_rank_value"),
                                                      html.P("Pořadí ČR", id="eu_rank_text")],
                                                     id="eu_rank",
                                                     className="mini_container",
                                                 ),
                                                 html.Div(
-                                                    [html.H6("N/A", id="eu_score_value"),
+                                                    [html.H6(str(np.round(float(filtered_df_eu.loc[filtered_df_eu['Země'] == 'Česká republika']['index eGov EU']),2)), id="eu_score_value"),
                                                      html.P("Skóre ČR", id="eu_score_text")],
                                                     id="eu_score",
                                                     className="mini_container",
                                                 ),
                                                 html.Div(
-                                                    [html.H6("N/A", id="eu_percentile_value"),
+                                                    [html.H6(filtered_df_eu.loc[filtered_df_eu['Země'] == 'Česká republika']['Percentil']+"", id="eu_percentile_value"),
                                                      html.P("Percentil ČR", id="eu_percentile_text")],
                                                     id="eu_percentile",
                                                     className="mini_container",
@@ -351,7 +355,11 @@ app.title = 'eGovernment benchmark'
 @app.callback(
     [Output('world-map-with-slider', 'figure'),
      Output('top-un-title', 'children'),
-     Output('top-un-table', 'children')],
+     Output('top-un-table', 'children'),
+     Output('un_rank_value', 'children'),
+     Output('un_score_value', 'children'),
+     Output('un_percentile_value', 'children')
+     ],
     [Input('year-slider', 'value')])
 def update_world_map(selected_year):
     filtered_df = pd.DataFrame(df[df.Year == selected_year], columns=['Czech name', 'UN eGov index'])
@@ -359,15 +367,22 @@ def update_world_map(selected_year):
     filtered_df['Percentil'] = filtered_df['UN eGov index'].rank(pct=True)
     filtered_df['Percentil'] = (filtered_df['Percentil'] * 100).round(1).astype(str) + '%'
     filtered_df = filtered_df[['Pořadí', 'Czech name', 'UN eGov index', 'Percentil']]
-    filtered_df = filtered_df.rename(columns={'Czech name': 'Země', 'UN eGov index': 'index eGov OSN'})
-    return generate_world_map(df, selected_year), 'TOP 15 zemí světa v roce ' + str(selected_year), generate_table(
-        filtered_df, 15)
+    filtered_df = filtered_df.rename(columns={'Czech name': 'Země','UN eGov index': 'index eGov OSN'})
+    return generate_world_map(df, selected_year), \
+           'TOP 15 zemí světa v roce ' + str(selected_year), \
+           generate_table(filtered_df, 15), \
+           str(int(filtered_df.loc[filtered_df['Země'] == 'Česká republika']['Pořadí']))+". místo", \
+           str(np.round(float(filtered_df.loc[filtered_df['Země'] == 'Česká republika']['index eGov OSN']),3))+"", \
+           filtered_df.loc[filtered_df['Země'] == 'Česká republika']['Percentil']
 
 
 @app.callback(
     [Output('europe-map-with-slider', 'figure'),
      Output('top-eu-title', 'children'),
-     Output('top-eu-table', 'children')],
+     Output('top-eu-table', 'children'),
+     Output('eu_rank_value', 'children'),
+     Output('eu_score_value', 'children'),
+     Output('eu_percentile_value', 'children')],
     [Input('year-slider-2', 'value')])
 def update_europe_map(selected_year):
     filtered_df_eu = pd.DataFrame(dfeu[dfeu.Year == selected_year], columns=['Czech name', 'EU eGov index'])
@@ -377,8 +392,12 @@ def update_europe_map(selected_year):
     filtered_df_eu = filtered_df_eu[['Pořadí', 'Czech name', 'EU eGov index', 'Percentil']]
     filtered_df_eu = filtered_df_eu.rename(columns={'Czech name': 'Země', 'EU eGov index': 'index eGov EU'})
     filtered_df_eu = filtered_df_eu.sort_values('index eGov EU', ascending=False)
-    return generate_europe_map(dfeu, selected_year), 'TOP 15 zemí EU v roce ' + str(selected_year), generate_table(
-        filtered_df_eu, 15)
+    return generate_europe_map(dfeu, selected_year), \
+           'TOP 15 zemí EU v roce ' + str(selected_year), \
+           generate_table(filtered_df_eu, 15), \
+           str(int(filtered_df_eu.loc[filtered_df_eu['Země'] == 'Česká republika']['Pořadí'])) + ". místo", \
+           str(np.round(float(filtered_df_eu.loc[filtered_df_eu['Země'] == 'Česká republika']['index eGov EU']), 2)), \
+           filtered_df_eu.loc[filtered_df_eu['Země'] == 'Česká republika']['Percentil']
 
 
 if __name__ == '__main__':

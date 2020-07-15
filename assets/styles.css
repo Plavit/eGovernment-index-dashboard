@@ -14,7 +14,10 @@ body {
   margin-bottom: 40px;
 }
 
-
+.download-button{
+  position: relative;
+  top: 20px;
+}
 
 .column,
 .columns {
@@ -39,6 +42,7 @@ body {
   position: relative;
   box-shadow: 2px 2px 2px lightgrey;
   text-align: center;
+  height: 100%;
 }
 
 .mini_container {
