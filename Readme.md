@@ -1,4 +1,6 @@
-## eGovernment index data viewer
+<img id="eGov-logo-text-CZ" width="400" src="assets/Logo-text-en.png">
+
+## eGovernment index dashboard: An eGov benchmarks data viewer
 ![eGovernment index dashboard deploy and test](https://github.com/Plavit/eGovernment-index-dashboard/workflows/eGovernment%20index%20dashboard%20deploy%20and%20test/badge.svg?branch=master)
 ![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_message=online&url=http%3A%2F%2Fegov-t1.herokuapp.com%2F)
 \
