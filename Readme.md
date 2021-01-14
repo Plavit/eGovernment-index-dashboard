@@ -7,8 +7,8 @@
 A simple Python and Dash Plotly app that visualizes hard-to-process data from eGov indexes by the European Union and the United Nations. This project started off as a part of a semestral assignment at FIT, Czech Technical University and later used during further research at the Charles University in Prague and at the Univeristy of Cambridge
 
 ## Mutations
-Different forks contain different versions. There are currently three branches:
--  `eGovernment-index-dashboard`, the original main working version, currently containing a czech mutation used for my diploma thesis
+Different ¨branches contain different versions. There are currently two branches:
+-  `master`, the original main working version, currently containing a czech mutation used for my diploma thesis
 -  `eGovernment-index-dashboard-international`, the version adapted for some English publications
 
 ### This version (`eGovernment-index-dashboard`)
