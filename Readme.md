@@ -12,7 +12,7 @@ Different ¨branches contain different versions. There are currently two branche
 -  `eGovernment-index-dashboard-international`, the version adapted for some English publications
 
 ### This version (`eGovernment-index-dashboard-international`)
-To be completed.
+Migrated to own repo
 
 
 ## Live example
