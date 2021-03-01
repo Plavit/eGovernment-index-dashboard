@@ -17,8 +17,8 @@ from generators import generate_table, generate_world_map, generate_europe_map
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 # Used dataset names
-DATA_UN = 'eGov-t4.csv'
-DATA_EU = 'eur-t2.csv'
+DATA_UN = 'eGov-t5.csv'
+DATA_EU = 'eur-t3.csv'
 
 df = pd.read_csv('data/{}'.format(DATA_UN))
 dfeu = pd.read_csv('data/{}'.format(DATA_EU))
