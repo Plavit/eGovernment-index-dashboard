@@ -386,7 +386,7 @@ app.layout = html.Div(
                                                                             "Roky"
                                                                         ),
                                                                         html.P(
-                                                                            "2012 + 2014 + 2016 + 2018"
+                                                                            "2012, 2014, 2016, 2018"
                                                                         ),
                                                                     ]
                                                                 ),
@@ -396,7 +396,7 @@ app.layout = html.Div(
                                                                             "Roky"
                                                                         ),
                                                                         html.P(
-                                                                            " 2013 + 2015 + 2017 + 2019"
+                                                                            "2013, 2015, 2017, 2019"
                                                                         ),
                                                                     ]
                                                                 )
@@ -407,17 +407,17 @@ app.layout = html.Div(
                                                                 html.Td(
                                                                     html.B(
                                                                         [
-                                                                            "Events in",
+                                                                            "Události",
                                                                             html.Br(),
-                                                                            "industry"
+                                                                            "v průmyslu"
                                                                         ]
                                                                     )
                                                                 ),
                                                                 html.Td(
-                                                                    "Business start-up"
+                                                                    "Založení firmy"
                                                                 ),
                                                                 html.Td(
-                                                                    "Regular business operations"
+                                                                    "Běžný provoz zavedeného podniku"
                                                                 )
                                                             ]
                                                         ),
@@ -426,28 +426,28 @@ app.layout = html.Div(
                                                                 html.Td(
                                                                     html.B(
                                                                         [
-                                                                            "Events for",
+                                                                            "Události",
                                                                             html.Br(),
-                                                                            "citizens"
+                                                                            "pro občany"
                                                                         ]
                                                                     )
                                                                 ),
                                                                 html.Td(
                                                                     [
-                                                                        "Losing and finding a job",
+                                                                        "Ztráta a hledání práce",
                                                                         html.Br(),
-                                                                        "Studying",
+                                                                        "Studium",
                                                                         html.Br(),
-                                                                        "Family life (since 2016)"
+                                                                        "Rodinný život (od roku 2016)"
                                                                     ]
                                                                 ),
                                                                 html.Td(
                                                                     [
-                                                                        "Starting a small claims procedure ",
+                                                                        "Zahájení řízení o drobných pohledávkách",
                                                                         html.Br(),
-                                                                        "Moving to a different place",
+                                                                        "Stěhování",
                                                                         html.Br(),
-                                                                        "Ownership and maintenance of a vehicle"
+                                                                        "Vlastnění a využívání automobilu"
                                                                     ]
                                                                 )
                                                             ]
@@ -459,8 +459,9 @@ app.layout = html.Div(
                                                     "indikátory, jako například online dostupnost obecných služeb "
                                                     "státní správy. Tyto indikátory zde nejsou zobrazeny za účelem"
                                                     "zjednodušení prezentovaných informací, jelikož nejsou přímo"
-                                                    "porovnatelné s daty z druhého indexu od OSN. Jsou ale k nalezení"
-                                                    "v původní dokumentaci indexu níže."
+                                                    "porovnatelné s daty z druhého indexu od OSN. Jsou ale k nalezení "
+                                                    "v původní dokumentaci spjaté s indexem, na kterou je k dispozici"
+                                                    "odkaz níže."
                                                 ),
                                                 html.P(
                                                     [
