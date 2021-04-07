@@ -29,7 +29,7 @@ filtered_df['Pořadí'] = filtered_df['UN eGov index'].rank(method='max', ascend
 filtered_df['Percentil'] = filtered_df['UN eGov index'].rank(pct=True)
 filtered_df['Percentil'] = (filtered_df['Percentil'] * 100).round(1).astype(str) + '%'
 filtered_df = filtered_df[['Pořadí', 'Czech name', 'UN eGov index', 'Percentil']]
-filtered_df = filtered_df.rename(columns={'Czech name': 'Země','UN eGov index': 'index eGov OSN'})
+filtered_df = filtered_df.rename(columns={'Czech name': 'Země', 'UN eGov index': 'index eGov OSN'})
 
 filtered_df_eu = pd.DataFrame(dfeu[dfeu.Year == dfeu['Year'].max()], columns=['Czech name', 'EU eGov index'])
 # Adding rank and percentile
@@ -146,8 +146,86 @@ app.layout = html.Div(
                                         ),
                                         html.Div(
                                             [
-                                                html.H3("Index eGovernmentu OSN"),
-                                                html.P("Index eGovernmentu publikovaný Organizací spojených národů od roku 2001. Bližší popis metodologie bude přidán v budoucnu.")
+                                                html.H3(
+                                                    "Index eGovernmentu OSN"
+                                                ),
+                                                html.P(
+                                                    "Index rozvoje e-Governmentu (e-Government Development Index; EGDI)"
+                                                    " je publikovaný Organizací spojených národů od roku 2001. "
+                                                    "Jde o komplexní ukazatel agregovaný ze tří dílčích "
+                                                    "hodnot – indexu online služeb (Online Service Index; OSI), indexu "
+                                                    "telekomunikační infrastruktury (Telecommunication Infrastructure "
+                                                    "Index; TII) a indexu lidského kapitálu (Human Capital Index; HCI)."
+                                                    " Konečná hodnota celkového indexu je vypočítána prostým "
+                                                    "aritmetickým průměrem, tedy pomocí následujícího vzorce:"
+                                                ),
+                                                html.I("EGDI = ⅓ × (OSI+TII+HCI)"
+                                                       ),
+                                                html.H6(
+                                                    "Tři dílčí komponenenty indexu jsou definovány následovně:"
+                                                ),
+                                                html.Ul(
+                                                    [
+                                                        html.Li(
+                                                            "OSI je normalizovaná hodnota mezi 0 a 1, která"
+                                                            " se rovná rozdílu skutečného celkového skóre země v tomto "
+                                                            "apektu a nejnižšího celkového skóre dosaženého jakoukoliv"
+                                                            "zemí, který je vydělen rozsahem všech celkových skóre "
+                                                            "všech zahrnutých zemí."
+                                                        ),
+                                                        html.Li(
+                                                            [
+                                                                "Hodnota TII je pro každou zemi aritmetickým průměrem "
+                                                                "následujících parametrů:",
+                                                                html.Ul(
+                                                                    [
+                                                                        html.Li(
+                                                                            "Odhad uživatelů internetu na 100 obyvatel;",
+                                                                        ),
+                                                                        html.Li(
+                                                                            "Počet uživatelů mobilní sítě "
+                                                                            "na 100 obyvatel;"
+                                                                        ),
+                                                                        html.Li(
+                                                                            "Počet aktivních předplatných mobilního "
+                                                                            "širokopásmového připojení na 100 obyvatel;"
+                                                                        ),
+                                                                        html.Li(
+                                                                            "Počet aktivních předplatných fixního "
+                                                                            "širokopásmového připojení na 100 obyvatel"
+                                                                        )
+                                                                    ]
+                                                                )
+                                                            ]
+                                                        ),
+                                                        html.Li(
+                                                            [
+                                                                "Hodnota HCI je pro každou zemi vypočtena pomocí "
+                                                                "následujících parametrů:",
+                                                                html.Ul(
+                                                                    [
+                                                                        html.Li(
+                                                                            "Míra gramotnosti dospělých;"
+                                                                        ),
+                                                                        html.Li(
+                                                                            "Kombinovaný hrubý poměr primárního, "
+                                                                            "sekundárního a terciárního vzdělání "
+                                                                            "v populaci;"
+                                                                        ),
+                                                                        html.Li(
+                                                                            "Očekávaný standardní počet let školní "
+                                                                            "docházky v zemi;"
+                                                                        ),
+                                                                        html.Li(
+                                                                            "Reálný průměrný počet let školní "
+                                                                            "docházky v zemi;"
+                                                                        )
+                                                                    ]
+                                                                )
+                                                            ]
+                                                        )
+                                                    ]
+                                                )
                                             ]
                                         )
                                     ],
@@ -190,19 +268,24 @@ app.layout = html.Div(
                                         html.Div(
                                             [
                                                 html.Div(
-                                                    [html.H6(str(int(filtered_df.loc[filtered_df['Země'] == 'Česká republika']['Pořadí']))+". místo", id="un_rank_value"),
+                                                    [html.H6(str(int(
+                                                        filtered_df.loc[filtered_df['Země'] == 'Česká republika'][
+                                                            'Pořadí'])) + ". místo", id="un_rank_value"),
                                                      html.P("Pořadí ČR", id="un_rank_text")],
                                                     id="un_rank",
                                                     className="mini_container",
                                                 ),
                                                 html.Div(
-                                                    [html.H6(str(np.round(float(filtered_df.loc[filtered_df['Země'] == 'Česká republika']['index eGov OSN']),3))+"", id="un_score_value"),
+                                                    [html.H6(str(np.round(float(
+                                                        filtered_df.loc[filtered_df['Země'] == 'Česká republika'][
+                                                            'index eGov OSN']), 3)) + "", id="un_score_value"),
                                                      html.P("Skóre ČR", id="un_score_text")],
                                                     id="un_score",
                                                     className="mini_container",
                                                 ),
                                                 html.Div(
-                                                    [html.H6(filtered_df.loc[filtered_df['Země'] == 'Česká republika']['Percentil']+"", id="un_percentile_value"),
+                                                    [html.H6(filtered_df.loc[filtered_df['Země'] == 'Česká republika'][
+                                                                 'Percentil'] + "", id="un_percentile_value"),
                                                      html.P("Percentil ČR", id="un_percentile_text")],
                                                     id="un_percentile",
                                                     className="mini_container",
@@ -241,7 +324,7 @@ app.layout = html.Div(
             className="row flex-display",
         ),
 
-html.Div(
+        html.Div(
             [
                 html.Div(
                     [
@@ -259,7 +342,8 @@ html.Div(
                                         html.Div(
                                             [
                                                 html.H3("Index eGovernmentu EU"),
-                                                html.P("Index eGovernmentu publikovaný Evropskou unií. Bližší popis metodologie bude přidán v budoucnu.")
+                                                html.P(
+                                                    "Index eGovernmentu publikovaný Evropskou unií. Bližší popis metodologie bude přidán v budoucnu.")
                                             ]
                                         )
                                     ],
@@ -300,20 +384,26 @@ html.Div(
                                         html.Div(
                                             [
                                                 html.Div(
-                                                    [html.H6(str(int(filtered_df_eu.loc[filtered_df_eu['Země'] == 'Česká republika']['Pořadí']))+". místo", id="eu_rank_value"),
+                                                    [html.H6(str(int(
+                                                        filtered_df_eu.loc[filtered_df_eu['Země'] == 'Česká republika'][
+                                                            'Pořadí'])) + ". místo", id="eu_rank_value"),
                                                      html.P("Pořadí ČR", id="eu_rank_text")],
                                                     id="eu_rank",
                                                     className="mini_container",
                                                 ),
                                                 html.Div(
-                                                    [html.H6(str(np.round(float(filtered_df_eu.loc[filtered_df_eu['Země'] == 'Česká republika']['index eGov EU']),2)), id="eu_score_value"),
-                                                     html.P("Skóre ČR", id="eu_score_text")],
+                                                    [html.H6(str(np.round(float(
+                                                        filtered_df_eu.loc[filtered_df_eu['Země'] == 'Česká republika'][
+                                                            'index eGov EU']), 2)), id="eu_score_value"),
+                                                        html.P("Skóre ČR", id="eu_score_text")],
                                                     id="eu_score",
                                                     className="mini_container",
                                                 ),
                                                 html.Div(
-                                                    [html.H6(filtered_df_eu.loc[filtered_df_eu['Země'] == 'Česká republika']['Percentil']+"", id="eu_percentile_value"),
-                                                     html.P("Percentil ČR", id="eu_percentile_text")],
+                                                    [html.H6(
+                                                        filtered_df_eu.loc[filtered_df_eu['Země'] == 'Česká republika'][
+                                                            'Percentil'] + "", id="eu_percentile_value"),
+                                                        html.P("Percentil ČR", id="eu_percentile_text")],
                                                     id="eu_percentile",
                                                     className="mini_container",
                                                 ),
@@ -374,12 +464,12 @@ def update_world_map(selected_year):
     filtered_df['Percentil'] = filtered_df['UN eGov index'].rank(pct=True)
     filtered_df['Percentil'] = (filtered_df['Percentil'] * 100).round(1).astype(str) + '%'
     filtered_df = filtered_df[['Pořadí', 'Czech name', 'UN eGov index', 'Percentil']]
-    filtered_df = filtered_df.rename(columns={'Czech name': 'Země','UN eGov index': 'index eGov OSN'})
+    filtered_df = filtered_df.rename(columns={'Czech name': 'Země', 'UN eGov index': 'index eGov OSN'})
     return generate_world_map(df, selected_year), \
            'TOP 15 zemí světa v roce ' + str(selected_year), \
            generate_table(filtered_df, 15), \
-           str(int(filtered_df.loc[filtered_df['Země'] == 'Česká republika']['Pořadí']))+". místo", \
-           str(np.round(float(filtered_df.loc[filtered_df['Země'] == 'Česká republika']['index eGov OSN']),3))+"", \
+           str(int(filtered_df.loc[filtered_df['Země'] == 'Česká republika']['Pořadí'])) + ". místo", \
+           str(np.round(float(filtered_df.loc[filtered_df['Země'] == 'Česká republika']['index eGov OSN']), 3)) + "", \
            filtered_df.loc[filtered_df['Země'] == 'Česká republika']['Percentil']
 
 
