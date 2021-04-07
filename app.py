@@ -86,10 +86,17 @@ app.layout = html.Div(
                             draggable='False',
                             id="logo",
                             height='auto',
-                            width=300,
+                            width=170,
+                        ),
+                        html.Img(
+                            src='https://iss.fsv.cuni.cz/themes/custom/fsv_uk/images/logo.svg',
+                            draggable='False',
+                            id="logo-CUNI-ISS",
+                            height='auto',
+                            width=220,
                         ),
                     ],
-                    className="two columns",
+                    className="three columns",
                 ),
                 html.Div(
                     [
