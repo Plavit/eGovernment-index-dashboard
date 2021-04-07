@@ -361,18 +361,16 @@ app.layout = html.Div(
                                             [
                                                 html.H3("Index eGovernmentu EU"),
                                                 html.P(
-                                                    "Index eGovernmentu publikovaný Evropskou unií. Bližší popis metodologie bude přidán v budoucnu."),
-                                                html.P(
-                                                    "The e-Government Benchmark is being pusblished by "
-                                                    "the European Union. It is based on a quantitative analysis "
-                                                    "of a set of eight so-called life events. Each life event "
-                                                    "consists of a user journey representing common public services "
-                                                    "that citizens or businesses will go through. Half of the index "
-                                                    "consisting of four life events is measured each year, "
-                                                    "with the life events alternating as seen in the following table."
-                                                    "The final "
-                                                    "index value for each country is calculated as a simple average "
-                                                    "value of the two latest surveys."
+                                                    "Index eGovernmentu publikovaný Evropskou unií. Je založený na "
+                                                    "kvantitativní analýze souboru osmi takzvaných životních událostí."
+                                                    "Každá životní událost se sestává z uživatelského průchodu, který"
+                                                    "reprezentuje běžné veřejné služby, které občané a firmy využívají."
+                                                    "Každý rok je měřena polovina idexu, tedy čtyři životní události, "
+                                                    "a soubor těchto událostí se ob rok střídá, jak je vidět na "
+                                                    "následující tabulce. Konečná hodnota indexu pro každou zemi je "
+                                                    "vypočtena jako prostý průměr celkových hodnot naměřených v rámci "
+                                                    "životních událostí za poslední dva roky, kdy byl index "
+                                                    "publikovaný."
                                                 ),
                                                 html.Table(
                                                     [
@@ -385,7 +383,7 @@ app.layout = html.Div(
                                                                 html.Th(
                                                                     [
                                                                         html.P(
-                                                                            "Years"
+                                                                            "Roky"
                                                                         ),
                                                                         html.P(
                                                                             "2012 + 2014 + 2016 + 2018"
@@ -395,7 +393,7 @@ app.layout = html.Div(
                                                                 html.Th(
                                                                     [
                                                                         html.P(
-                                                                            "Years"
+                                                                            "Roky"
                                                                         ),
                                                                         html.P(
                                                                             " 2013 + 2015 + 2017 + 2019"
@@ -457,15 +455,17 @@ app.layout = html.Div(
                                                     ]
                                                 ),
                                                 html.P(
-                                                    "Furthermore, there are other indicators that are also measured "
-                                                    "in the publications, such as the online availability of general "
-                                                    "public services. These metrics are omitted from this dashboard "
-                                                    "for simplicity as they are not directly comparable with the UN "
-                                                    "benchmark. "
+                                                    "Kromě hlavního indexu jsou v publikacích EU měřeny i jiné "
+                                                    "indikátory, jako například online dostupnost obecných služeb "
+                                                    "státní správy. Tyto indikátory zde nejsou zobrazeny za účelem"
+                                                    "zjednodušení prezentovaných informací, jelikož nejsou přímo"
+                                                    "porovnatelné s daty z druhého indexu od OSN. Jsou ale k nalezení"
+                                                    "v původní dokumentaci indexu níže."
                                                 ),
                                                 html.P(
                                                     [
-                                                        "Další informace k metodologii lze nalézt v ",
+                                                        "Zmíněné další indikátory a bližší informace k metodologii "
+                                                        "lze nalézt v ",
                                                         html.A(
                                                             "materiálech publikovaných přímo orgány "
                                                             "Evropské unie",
