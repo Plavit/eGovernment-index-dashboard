@@ -108,6 +108,10 @@ app.layout = html.Div(
                             "Jednoduchý přehled hodnot z indexů eGovernmentu od OSN a EU",
                             style={"margin-top": "0px"}
                         ),
+                        html.I(
+                            "Tento web byl vytvořen v rámci diplomové práce Marka Szelese na ISS FSV UK",
+                            style={"margin-top": "0px"}
+                        ),
 
                     ],
                     className="eight columns",
@@ -222,6 +226,20 @@ app.layout = html.Div(
                                                                         )
                                                                     ]
                                                                 )
+                                                            ]
+                                                        ),
+                                                        html.P(
+                                                            [
+                                                                "Další informace k metodologii lze nalézt v ",
+                                                                html.A(
+                                                                    "materiálech publikovaných přímo Organizací "
+                                                                    "spojených národů",
+                                                                    href="https://www.un.org/development/desa/"
+                                                                         "publications/publication/"
+                                                                         "2020-united-nations-e-government-survey",
+                                                                    target="_blank",
+                                                                ),
+                                                                "."
                                                             ]
                                                         )
                                                     ]
@@ -343,7 +361,121 @@ app.layout = html.Div(
                                             [
                                                 html.H3("Index eGovernmentu EU"),
                                                 html.P(
-                                                    "Index eGovernmentu publikovaný Evropskou unií. Bližší popis metodologie bude přidán v budoucnu.")
+                                                    "Index eGovernmentu publikovaný Evropskou unií. Bližší popis metodologie bude přidán v budoucnu."),
+                                                html.P(
+                                                    "The e-Government Benchmark is being pusblished by "
+                                                    "the European Union. It is based on a quantitative analysis "
+                                                    "of a set of eight so-called life events. Each life event "
+                                                    "consists of a user journey representing common public services "
+                                                    "that citizens or businesses will go through. Half of the index "
+                                                    "consisting of four life events is measured each year, "
+                                                    "with the life events alternating as seen in the following table."
+                                                    "The final "
+                                                    "index value for each country is calculated as a simple average "
+                                                    "value of the two latest surveys."
+                                                ),
+                                                html.Table(
+                                                    [
+
+                                                        html.Tr(
+                                                            [
+                                                                html.Th(
+                                                                    ""
+                                                                ),
+                                                                html.Th(
+                                                                    [
+                                                                        html.P(
+                                                                            "Years"
+                                                                        ),
+                                                                        html.P(
+                                                                            "2012 + 2014 + 2016 + 2018"
+                                                                        ),
+                                                                    ]
+                                                                ),
+                                                                html.Th(
+                                                                    [
+                                                                        html.P(
+                                                                            "Years"
+                                                                        ),
+                                                                        html.P(
+                                                                            " 2013 + 2015 + 2017 + 2019"
+                                                                        ),
+                                                                    ]
+                                                                )
+                                                            ]
+                                                        ),
+                                                        html.Tr(
+                                                            [
+                                                                html.Td(
+                                                                    html.B(
+                                                                        [
+                                                                            "Events in",
+                                                                            html.Br(),
+                                                                            "industry"
+                                                                        ]
+                                                                    )
+                                                                ),
+                                                                html.Td(
+                                                                    "Business start-up"
+                                                                ),
+                                                                html.Td(
+                                                                    "Regular business operations"
+                                                                )
+                                                            ]
+                                                        ),
+                                                        html.Tr(
+                                                            [
+                                                                html.Td(
+                                                                    html.B(
+                                                                        [
+                                                                            "Events for",
+                                                                            html.Br(),
+                                                                            "citizens"
+                                                                        ]
+                                                                    )
+                                                                ),
+                                                                html.Td(
+                                                                    [
+                                                                        "Losing and finding a job",
+                                                                        html.Br(),
+                                                                        "Studying",
+                                                                        html.Br(),
+                                                                        "Family life (since 2016)"
+                                                                    ]
+                                                                ),
+                                                                html.Td(
+                                                                    [
+                                                                        "Starting a small claims procedure ",
+                                                                        html.Br(),
+                                                                        "Moving to a different place",
+                                                                        html.Br(),
+                                                                        "Ownership and maintenance of a vehicle"
+                                                                    ]
+                                                                )
+                                                            ]
+                                                        )
+                                                    ]
+                                                ),
+                                                html.P(
+                                                    "Furthermore, there are other indicators that are also measured "
+                                                    "in the publications, such as the online availability of general "
+                                                    "public services. These metrics are omitted from this dashboard "
+                                                    "for simplicity as they are not directly comparable with the UN "
+                                                    "benchmark. "
+                                                ),
+                                                html.P(
+                                                    [
+                                                        "Další informace k metodologii lze nalézt v ",
+                                                        html.A(
+                                                            "materiálech publikovaných přímo orgány "
+                                                            "Evropské unie",
+                                                            href="https://digital-strategy.ec.europa.eu/en/library/"
+                                                                 "egovernment-benchmark-2020-egovernment-works-people",
+                                                            target="_blank",
+                                                        ),
+                                                        "."
+                                                    ]
+                                                )
                                             ]
                                         )
                                     ],
