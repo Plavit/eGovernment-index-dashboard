@@ -49,7 +49,7 @@ def generate_world_map(df, year):
         marker_line_color='darkgray',
         marker_line_width=0.5,
         colorbar_tickprefix='',
-        colorbar_title=str(year) + ' index value',
+        colorbar_title='Hodnota indexu v roce ' + str(year),
     ))
 
     fig.update_geos(
@@ -108,7 +108,7 @@ def generate_europe_map(df, year):
         marker_line_color='darkgray',
         marker_line_width=0.5,
         colorbar_tickprefix='',
-        colorbar_title=str(year) + ' index value',
+        colorbar_title='Hodnota indexu v roce ' + str(year),
     ))
 
     figeu.update_geos(
