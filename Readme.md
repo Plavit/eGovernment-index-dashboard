@@ -15,7 +15,7 @@ This project has been split into several variations over time. Different reposit
 
 It is currently only available in Czech, but is quite self explanatory.
 
-Check the app here:
+Check the app here (Deployed on Heroku 22):
 http://egov-t1.herokuapp.com/
 
 ## Deployment
@@ -25,3 +25,4 @@ To run locally:
 `npm install`
 2) Run the app with:
 `$ python app.py`
+
